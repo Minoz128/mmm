@@ -1,0 +1,82 @@
+{include file="public/header"}
+<body>
+<table class="my-table table table-border table-bordered table-bg table-hover table-sort table-responsive">
+    <tr>
+        <td>
+            <div class="row cl">
+                <div>
+                    <input type="hidden" value="{$tag}" id="tag">
+                    <button class="btn-form-submit btn btn-secondary radius" onclick="getIds()" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存权限</button>
+                    <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <td colspan="4" style="text-align: left;text-indent: 260px;">
+        {volist name="tree.childrens" id="vo"}
+            <div style="padding: 5px 10px;font-size: 14px"><input type="checkbox" id="{$vo.id}" name="ids" value="{$vo.id}" onclick="return false;"><strong>{$vo.tagname}</strong></div>
+            <div style="padding: 5px 10px">
+                {volist name="vo.sonlists" id="children"}
+                <label for="{$children.id}"><input type="checkbox" id="{$children.id}" name="ids" value="{$children.id}">
+                    {$children.tagname}
+                </label>&nbsp;
+                {/volist}
+            </div>
+        {/volist}
+    </td>
+</table>
+{include file="public/footer"}
+<script>
+
+    $(".selectId").change(function () {
+        $("input[name='ids']").removeAttr("checked");
+        var url = "{:url('auth/authrule')}";
+        var id = $(this).val();
+        var data = {"id" : id};
+        $.post(url,data,function(result){
+            if(result.status == 1){
+                var Ids = result.data;
+                $(Ids.split(",")).each(function (i,dom) {
+                    //console.log(dom);
+                    $(":checkbox[value='"+dom+"']").prop("checked",true);
+                    $(":checkbox[id='"+dom+"']").prop("checked",true);
+                });
+            }
+        },"JSON");
+    });
+
+    function getIds() {
+        var id = $("#id").val();
+        var text = "";
+        $("[name='ids']:checked").each(function (index,element) {
+            text += $(this).val() + ",";
+        });
+        text = text.substr(0,text.length-1);
+
+        var url = "{:url('auth/postrule')}";
+        var data = {"id" : id,"rules" : text};
+        $.post(url,data,function (result) {
+            if(result.status == 1){
+                window.parent.location.reload();
+            }
+            else if(result.status == 0){
+                dialog.error(result.message);
+            }
+        },"JSON");
+
+
+    }
+
+
+    var tags = $("#tag").val();
+
+    tags.split(",").each(function (i,dom) {
+        console.log(dom);
+        $(":checkbox[value='"+dom+"']").prop("checked",true);
+        $(":checkbox[id='"+dom+"']").prop("checked",true);
+    });
+    
+
+
+
+</script>

@@ -65,6 +65,7 @@ class Tagbase extends Controller{
                 $data['nid'] = $realnode;
                 $result = model('Tagbase')->save($data);
                 if($result){
+                    session("tags_SelectByMachine",null);
                     return show(1,"添加成功");
                 }else{
                     return show(0,"添加失败");
@@ -110,6 +111,7 @@ class Tagbase extends Controller{
             try{
                 $result = model('Tagbase')->save($data);
                 if($result){
+                    session("tags_SelectByMachine",null);
                     return show(1,"添加成功");
                 }else{
                     return show(0,"添加失败");

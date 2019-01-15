@@ -13,7 +13,7 @@ class Pic extends Validate{
     //什么场景
     protected $scene=[
 
-        'add' => ['uid','type','manmadetags'],
+        'add' => ['uid','type'],
     ];
 
     //加载什么数据

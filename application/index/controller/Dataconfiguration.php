@@ -390,7 +390,7 @@ class Dataconfiguration extends Controller{
                         $childrenByRoot[$childrenKey]['sonchildcounts'] = count($sonTags);
                         $list = [];
                         foreach($sonTags as $sonKey => $sonValue){
-                            $list[] = $sonValue['id'];
+                            $list[] = $sonValue;
                         }
                         //母标签下子标签信息
                         $childrenByRoot[$childrenKey]['sonlists'] = $list;
@@ -406,7 +406,13 @@ class Dataconfiguration extends Controller{
 
     /**
      * 准备函数 遍历m_pic每张表的数据
+     *
+     * 如果没有session 跳转到SelectByMachineSession方法
+     * 目的是避免每次生成随机数据都去数据库查询一次数据
+     *
      * 并根据记录的type(实验编号) 与 session中匹配 只返回匹配对应的children信息
+     * 把数据传入执行函数executeRandomdata
+     *
      * @throws \think\db\exception\DataNotFoundException
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
@@ -457,6 +463,34 @@ class Dataconfiguration extends Controller{
             return "single_insert_success";
         }else{
             $this->error("参数传递不合法");
+        }
+    }
+
+
+    function updatetag(){
+        $id = input('get.id');
+        session("tags_SelectByMachine",null);
+        $this->SelectByMachineSession();
+        if (is_numeric($id)){
+            $tag = model('Pic')->get($id);
+            if($tag){
+                $type =$tag['type'];
+                $tag = $tag['tag'];
+                if(is_array(session("tags_SelectByMachine"))){
+                    foreach(session("tags_SelectByMachine") as $key=>$value){
+                        if($value['id'] == $type){
+                            $tree = session("tags_SelectByMachine")[$key];
+                        }
+                    };
+
+                    return $this->fetch('',[
+                        'tag' => $tag,
+                        'tree' => $tree
+                    ]);
+                }
+
+
+            }
         }
     }
 }
