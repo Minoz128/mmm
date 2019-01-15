@@ -1,0 +1,130 @@
+{include file='public/header'}
+<body>
+<div class="page-container">
+    <form class="form form-horizontal" id="form-mmm-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传用户：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" attr-uid="{$user[0]['uid']}" value="{$user[0]['username']}" placeholder="{$user[0]['username']}"  name="uid" readonly>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>选择实验：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select name="" class="select selectId">
+					<option value="">-请选择实验-</option>
+                    {volist name="experience" id="vo"}
+                        <option value="{$vo.id}">-{$vo.name}-</option>
+                    {/volist}
+				</select>
+				</span>
+            </div>
+        </div>
+
+        <div class="row cl" id="waitarea" style="display: none">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>选择标签：</label>
+            <div class="formControls col-xs-8 col-sm-9" id="nodetext" style="left: 150px;">
+
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">图片摘要：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <textarea name="brief" id="brief" cols="" rows="" class="textarea"  placeholder="备注信息"></textarea>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">上传图片：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input class="uploadifive" type="file">
+                <div id="appendImgList" style="margin-top: 20px;"></div>
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button onClick="SubmitForm()" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+                <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+{include file='public/footer'}
+<script>
+    var SCOPE = {
+        'image_upload' : "{:url('dataconfiguration/upload')}",
+        'get_infomation' : "{:url('tagbase/getinfo')}"
+    }
+
+    $(".selectId").change(function () {
+        var id = $(this).val();
+        var url = SCOPE.get_infomation;
+        var data = {"id":id};
+        $.post(url,data,function (result) {
+            //console.log(result);
+            var html = "";
+            $(result).each(function (i) {
+                html += "<div style=\"padding: 5px 10px;font-size: 14px\"><input type=\"checkbox\" onclick=\"return false;\" id=\""+this.tagname+"\" name=\"ids\" value=\""+this.id+"\"><strong>"+this.tagname+"</strong></div>";
+                html += "<div style=\"padding: 5px 10px\">";
+                    $(this.children).each(function (i) {
+                        html += "<label for=\""+this.id+"\"><input type=\"checkbox\" id=\""+this.id+"\" name=\"ids\" value=\""+this.id+"\">"+this.tagname+"</label>&nbsp;";
+                    })
+                html += "</div>";
+            });
+            //console.log(html);
+            $("#nodetext").html(html);
+            $("#waitarea").slideDown();
+        },"JSON");
+    });
+    
+    function SubmitForm() {
+        var text = "";
+        $("[name='ids']:checked").each(function (index,element) {
+            text += $(this).val() + ",";
+        });
+        text = text.substr(0,text.length-1);
+
+        var jsondata = {};
+        $("#appendImgList img").each(function (i) {
+            var img_url = $(this).attr("relative-src");
+            jsondata[i] = img_url
+        });
+
+        var uid = $("input[name='uid']").attr("attr-uid");
+        var status = 0;
+        var type = $(".selectId").val();
+        var brief = $("#brief").val();
+        //var src = $("#upload_img").attr("relative-src");
+
+        if(!text){
+            dialog.error("请选择标签"); return;
+        }
+        var imgcount = $("#appendImgList img").size();
+        if(imgcount == 0){
+            dialog.error("请上传图片"); return;
+        }
+
+        if(!type){
+            dialog.error("请选择实验"); return;
+        }
+        if(!uid){
+            dialog.error("用户名不能为空"); return;
+        }
+
+        var url = "{:url('dataconfiguration/adddata')}";
+        var data = {"uid":uid,"status":status,"imglist":jsondata,"type":type,"brief":brief,"manmadetags":text};
+
+        $.post(url,data,function(result){
+            if(result.status == 0){
+                dialog.error(result.message)
+            }else if(result.status == 1){
+                window.parent.location.reload();
+            }
+        },'JSON');
+    }
+</script>
+</html>

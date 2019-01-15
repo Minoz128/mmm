@@ -1,0 +1,76 @@
+{include file="public/header"}
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统设置 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c">
+        <button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
+        <span class="select-box inline">
+        <input type="text" name="" id="" placeholder=" 资讯名称" style="width:250px" class="input-text">
+        <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜资讯</button>
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" data-title="添加用户" data-href="" onclick="layer_show('添加信息','{:url('auth/adduser')}','','350')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a> </span> <span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
+    <div class="mt-20">
+        <table class="my-table table table-border table-bordered table-bg table-hover table-sort table-responsive">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="25">ID</th>
+                <th width="80">隶属于用户组</th>
+                <th width="100">用户名</th>
+                <th width="120">密码</th>
+                <th width="100">状态(单击此列修改启用状态)</th>
+                <th width="80">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="users" id="vo"}
+            <tr class="text-c">
+                <td><input type="checkbox" value="" name=""></td>
+                <td>{$vo.uid}</td>
+                <td>{$vo.group_id|group_id}</td>
+                <td>{$vo.username}</td>
+                <td>{$vo.password}</td>
+                <td><a {if condition="$vo.uid eq 1"} style="display: none" {/if} href="{:url('auth/updateuserstatus',['uid'=>$vo.uid,'status'=>$vo.status == 1?0:1])}" title="切换状态">{$vo.status|commonstatus}</a> <span {if condition="$vo.uid eq 1 or $vo.status neq 0"} style="display: none" {/if}>冻结状态</span></td>
+                <td class="f-14 td-manage"> <a {if condition="$vo.uid eq 1"} style="display: none" {/if} style="text-decoration:none" class="ml-5" onClick="layer_show('编辑用户','{:url(\'auth/edituser\',[\'uid\'=>$vo.uid])}','','350')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a {if condition="$vo.uid eq 1"} style="display: none" {/if} style="text-decoration:none" class="ml-5" onClick="del({$vo.uid})" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a> </td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{include file="public/footer"}
+<script>
+
+
+
+    var table = $(".my-table").dataTable({
+
+    });
+
+    function del(uid) {
+        if(uid){
+            var url = "{:url('auth/deluser')}";
+            var data = {'uid':uid};
+            layer.open({
+                title: '请确认',
+                icon: 3,
+                content: '确认删除该用户吗？',
+                btn: ['确定', '取消'],
+                yes: function(index) {
+                    $.post(url,data,function (result) {
+                        if(result.status == 1){
+                            window.location.reload();
+                        }
+                        else if(result.status == 0){
+                            dialog.error(result.message);
+                        }
+                    },'JSON')
+                },
+                function(index) {
+                    layer.close(index)
+                }
+            })
+        }
+    }
+</script>

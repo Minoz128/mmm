@@ -1,0 +1,47 @@
+{include file="public/header"}
+<article class="page-container">
+    <form class="form form-horizontal" id="form-mmm-add">
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标签组：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="hidden" name="nid" value="{$data.id}">
+                <input type="hidden" name="connectbaseid" value="{$connectbaseid}">
+                <input type="text" class="input-text" value="{$data.tagname}" readonly>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标签：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" name="tagname" class="input-text" value="" placeholder="请填写标签">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>状态：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select name="status" class="select">
+                    <option value="1">开启</option>
+					<option value="0">冻结</option>
+				</select>
+				</span>
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn-form-submit btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+                <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+{include file="public/footer"}
+<script>
+    var SCOPE = {
+        'form_add_url' : "{:url('tagbase/addsontag')}",
+    }
+</script>
+</html>

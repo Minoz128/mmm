@@ -1,0 +1,84 @@
+{include file='public/header'}
+<body>
+<div class="page-container">
+    <form class="form form-horizontal" id="form-mmm-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传用户：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" attr-uid="{$user[0]['uid']}" value="{$user[0]['username']}" placeholder="{$user[0]['username']}"  name="uid" readonly>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>选择实验：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select name="" class="select selectId">
+					<option value="">-请选择实验-</option>
+                    {volist name="experience" id="vo"}
+                        <option value="{$vo.id}">-{$vo.name}-</option>
+                    {/volist}
+				</select>
+				</span>
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>爬取数量：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"  value="" placeholder="正整数，越多爬取耗时约长，取决于网速，一般推荐不超过60"  name="num" id="num">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>关键字：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"  value="" placeholder="输入关键字，随后系统提交百度图片检索并下载"  name="patchKeywords" id="patchKeywords">
+            </div>
+        </div>
+
+
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button onClick="SubmitPatch()" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+                <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+{include file='public/footer'}
+<script>
+
+
+    function SubmitPatch() {
+        var patchKeywords = $("#patchKeywords").val();
+        var num = $("#num").val();
+
+        if(!patchKeywords){
+            dialog.error("请输入检索关键字！");return;
+        }
+        if(!num){
+            dialog.error("请填写预期爬取数量！");return;
+        }
+        if (!(/(^[1-9]\d*$)/.test(num))) {
+            dialog.error("预期爬取数量不合法，请填写正整数");return;
+        }
+        var index = layer.load(1, {
+            shade: [0.1,'#fff'] //0.1透明度的白色背景
+        });
+
+        var url = "{:url('dataconfiguration/searchKeywordsAndDownload')}";
+        var type = $(".selectId").val();
+        var data = {"num":num,"keywords":patchKeywords,"type":type};
+        console.log(data);
+        $.post(url,data,function (result) {
+            if(result.status == 1){
+                var data = result.data;
+                var str = "从百度图片(https://image.baidu.com/)库中爬取<span style='color:green'> " + data.num + "</span> 张图片" + ", 耗时<span style='color: green'> "+ data.time + " </span>秒" + ", 消耗内存 <span style='color: green'>" + data.memory_use +"Mb </span>";
+                dialog.success(str);
+            }
+        },"JSON");
+    }
+</script>
+</html>

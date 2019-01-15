@@ -1,0 +1,81 @@
+{include file="public/header"}
+<body>
+    <table class="my-table table table-border table-bordered table-bg table-hover table-sort table-responsive">
+        <tr>
+            <td>
+                <div class="row cl">
+                    <div class="formControls col-xs-5 col-sm-5">
+                        <span class="select-box">
+                            <select class="select selectId" id="id">
+                                <option value="">-请选择用户组-</option>
+                                {volist name="groups" id="vo"}
+                                <option value="{$vo.id}">-{$vo.title}-</option>
+                                {/volist}
+                            </select>
+				        </span>
+                    </div>
+                    <div>
+                        <button class="btn-form-submit btn btn-secondary radius" onclick="getIds()" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存权限</button>
+                        <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <td colspan="4" style="text-align: left;text-indent: 260px;">
+            {volist name="tree" id="vo"}
+                <div style="padding: 5px 10px;font-size: 14px"><input type="checkbox" id="{$vo.id}" name="ids" value="{$vo.id}"><strong>{$vo.title}</strong></div>
+                <div style="padding: 5px 10px">
+                    {volist name="vo.children" id="children"}
+                        <label for="{$children.id}"><input type="checkbox" id="{$children.id}" name="ids" value="{$children.id}">
+                            {$children.title}
+                        </label>&nbsp;
+                    {/volist}
+                </div>
+            {/volist}
+        </td>
+    </table>
+{include file="public/footer"}
+<script>
+
+    $(".selectId").change(function () {
+        $("input[name='ids']").removeAttr("checked");
+        var url = "{:url('auth/authrule')}";
+        var id = $(this).val();
+        var data = {"id" : id};
+        $.post(url,data,function(result){
+            if(result.status == 1){
+                var Ids = result.data;
+                $(Ids.split(",")).each(function (i,dom) {
+                    console.log(dom);
+                    $(":checkbox[value='"+dom+"']").prop("checked",true);
+                    $(":checkbox[id='"+dom+"']").prop("checked",true);
+                });
+            }
+        },"JSON");
+    });
+    
+    function getIds() {
+        var id = $("#id").val();
+        var text = "";
+        $("[name='ids']:checked").each(function (index,element) {
+            text += $(this).val() + ",";
+        });
+        text = text.substr(0,text.length-1);
+
+        var url = "{:url('auth/postrule')}";
+        var data = {"id" : id,"rules" : text};
+        $.post(url,data,function (result) {
+            if(result.status == 1){
+                window.parent.location.reload();
+            }
+            else if(result.status == 0){
+                dialog.error(result.message);
+            }
+        },"JSON");
+
+
+    }
+
+
+
+</script>
