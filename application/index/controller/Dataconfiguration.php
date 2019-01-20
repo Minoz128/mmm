@@ -32,6 +32,14 @@ class Dataconfiguration extends Controller{
             case "3":
                 $str = " resulterr=1";
                 break;
+            //已标注数据
+            case "4":
+                $str = " manmadetags = null";
+                break;
+            //未标注数据
+            case "5":
+                $str = " manmadetags != null";
+                break;
             default :
                 $str = " status=0";
                 break;
@@ -419,6 +427,8 @@ class Dataconfiguration extends Controller{
      *
      */
     function rendomSelectByMachine(){
+        session("tags_SelectByMachine",null);
+        $this->SelectByMachineSession();
         if(!is_array(session("tags_SelectByMachine"))){
             $return = $this->SelectByMachineSession();
             if(!$return){
@@ -452,13 +462,10 @@ class Dataconfiguration extends Controller{
             foreach ($data as $key=>$value){
                 if(is_array($value['sonlists']) && $value['sonchildcounts']>0){
                 $rand = rand(0,$value['sonchildcounts']-1);
-                    $insert.= $data[$key]['sonlists'][$rand].',';
+                    $insert.= $data[$key]['sonlists'][$rand]['id'].',';
                 }
             }
             $insert = substr($insert,0,-1);
-            $insertData = [
-                'tag' => $insert
-            ];
             model('Pic')->updateData($id,$insert);
             return "single_insert_success";
         }else{
@@ -466,7 +473,13 @@ class Dataconfiguration extends Controller{
         }
     }
 
-
+    /**
+     * [手工修正显示页面]
+     * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
     function updatetag(){
         $id = input('get.id');
         session("tags_SelectByMachine",null);
@@ -484,13 +497,49 @@ class Dataconfiguration extends Controller{
                     };
 
                     return $this->fetch('',[
+                        'user' => session('user')[0]['username'],
                         'tag' => $tag,
-                        'tree' => $tree
+                        'tree' => $tree,
+                        'id' => $id
                     ]);
                 }
-
-
             }
         }
     }
+
+    /**
+     * 提交人工修正接口
+     */
+    function updateManMadeTags(){
+        $data = input('post.');
+        if(!Validate("Pic")->scene("updateManMade")->check($data)){
+            return show(0,Validate("Pic")->getError());
+        }
+        $res = model('Pic')->save(['manmadetags'=>$data['manmadetags']],['id'=>$data['id']]);
+        if($res){
+            return show(1,"更新成功");
+        }else{
+            return show(0,"更新失败");
+        }
+    }
+
+    //数据集管理->图片标注
+    function tagbyman(){
+        $allData = model('Pic')->getAllData("1=1");
+        $allCount = count($allData);
+        $status0Data = model('Pic')->selectByWhere("status='0'");
+        $status0Count = $status0Data[0]['count'];
+        $status1Data = model('Pic')->selectByWhere("status='1'");
+        $status1Count = $status1Data[0]['count'];
+
+        return $this->fetch('',[
+            'allData' => $allData,
+            'allCount' => $allCount,
+            'status0Data' => $status0Data,
+            'status0Count' => $status0Count,
+            'status1Data' => $status1Data,
+            'status1Count' => $status1Count,
+        ]);
+    }
+
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:92:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/select.html";i:1547484669;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:92:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/select.html";i:1547996492;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -47,7 +47,8 @@
                 <a class="btn btn-warning radius" onclick="DelConfirm()"> 一键清空所有图片信息</a>
                 <a class="btn btn-primary-outline radius" href="<?php echo url('Dataconfiguration/rendomSelectByMachine'); ?>"> 生成机器判别标签</a>
             </span>
-            <span class="r">共有数据：<strong><?php echo $count; ?></strong> 条</span> </div>
+            <span class="r">共有数据：<strong><?php echo $count; ?></strong> 条</span>
+        </div>
 
         <div class="mt-20">
             <table class="my-table table table-border table-bordered table-bg table-hover table-sort">
@@ -57,12 +58,11 @@
                         <th width="20">ID</th>
                         <th width="70">分类</th>
                         <th width="100">图像</th>
+                        <th width="60">发布状态</th>
                         <th width="100">机器判定</th>
                         <th width="100">人工修正</th>
-                        <!--<th width="120">更新时间</th>-->
-                        <th width="60">发布状态</th>
                         <th width="170">审核(如果机器标注正确,请选对勾)</th>
-                        <th width="55">审核人</th>
+                        <th width="55">信息来源</th>
                         <th width="40">正确性</th>
                     </tr>
                 </thead>
@@ -73,11 +73,10 @@
                         <td><?php echo $vo['id']; ?></td>
                         <td><?php echo type($vo['type']); ?></td>
                         <td><a href="/mmm/public<?php echo $vo['src']; ?>" target="_blank"><img width="100" class="picture-thumb" src="/mmm/public<?php echo $vo['src']; ?>"></a></td>
-                        <td class="text-c"><?php echo manmadetags($vo['tag']); ?></td>
-                        <td class="text-c"><?php echo manmadetags($vo['manmadetags']); ?></td>
-                        <!--<td><?php echo $vo['date']; ?></td>-->
                         <td class="td-status"><?php echo status($vo['status']); ?></td>
-                        <td class="td-manage"><a <?php if(($vo['resulterr'] == '1') OR ($vo['resulterr'] == '2')): ?> style="text-decoration:none;display: none" <?php endif; ?> style="text-decoration:none" class="ml-5" onClick="postData(<?php echo $vo['id']; ?>,1)" href="javascript:;" title="判定机器识别结果正确"><i class="Hui-iconfont">&#xe6e1;</i></a> <a <?php if(($vo['resulterr'] == '1') OR ($vo['resulterr'] == '2')): ?> style="text-decoration:none;display: none" <?php endif; ?> style="text-decoration:none" class="ml-5" onClick="postData(<?php echo $vo['id']; ?>,2)" href="javascript:;" title="判定机器识别结果错误"><i class="Hui-iconfont">&#xe6e0;</i></a></td>
+                        <td class="text-c"><?php echo mechinetags($vo['tag']); ?></td>
+                        <td class="text-c"><?php echo manmadetags($vo['manmadetags']); ?></td>
+                        <td class="td-manage"><a onclick="layer_show('人工修正标注','<?php echo url('dataconfiguration/updatetag',['id'=>$vo['id']]); ?>','','400')" class="ml-5" title="点击进行人工标注">人工标注</a><a <?php if(($vo['resulterr'] == '1') OR ($vo['resulterr'] == '2')): ?> style="text-decoration:none;display: none" <?php endif; ?> style="text-decoration:none" class="ml-5" onClick="postData(<?php echo $vo['id']; ?>,1)" href="javascript:;" title="判定机器识别结果正确"><i class="Hui-iconfont">&#xe6e1;</i></a> <a <?php if(($vo['resulterr'] == '1') OR ($vo['resulterr'] == '2')): ?> style="text-decoration:none;display: none" <?php endif; ?> style="text-decoration:none" class="ml-5" onClick="postData(<?php echo $vo['id']; ?>,2)" href="javascript:;" title="判定机器识别结果错误"><i class="Hui-iconfont">&#xe6e0;</i></a></td>
                         <td><?php echo getuserbyuid($vo['uid']); ?></td>
                         <td><?php echo resulterr($vo['resulterr']); ?></td>
                     </tr>
@@ -156,6 +155,8 @@
             }
         );
     }
+    
+
 </script>
 
 </html>

@@ -1,7 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f81c1bc-c2af-415f-92fa-e6b1ec660489" name="Default Changelist" comment="" />
+    <list default="true" id="9f81c1bc-c2af-415f-92fa-e6b1ec660489" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Dataconfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Dataconfiguration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/model/Pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/model/Pic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/validate/Pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/validate/Pic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/dataconfiguration/select.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/dataconfiguration/select.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/dataconfiguration/updatetag.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/dataconfiguration/updatetag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1046785463,3166519129&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1057107662,387094523&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1072514136,1934711206&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1087495110,545303815&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=109958637,3825221272&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1108615296,3113306612&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1135894379,3735840925&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1252409544,478929086&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1299842767,1181153645&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1336060181,914441139&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1357763001,760114228&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1361769978,3501268832&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1448714938,2151564647&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1450850285,3202796738&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1463134688,3351248769&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=154603817,3028123296&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=156423883,1050402361&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1612163671,4202954326&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1622812112,2790460197&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1662232266,4128046122&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1718533413,541983207&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1808393504,2734959852&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1845801207,288975644&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1859956145,1864211337&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1957597990,3090877880&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=200962967,2191114723&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2194667995,1378984718&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2210820243,288538214&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2330364146,3143040889&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2331130681,1445908073&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2355452751,516603973&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2369339022,4230252782&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2387774078,948659958&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2466066528,4277991085&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2470574843,530393854&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2578073987,4069810488&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2660597778,278096489&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2691532057,1414549867&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2698406427,2285540984&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2718794256,3311652427&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2761540801,614274645&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=281030733,2941274895&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2820693694,2920243562&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2825384378,226696796&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2838783833,800998860&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=283990217,4198311287&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2877130613,2237399893&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2929980238,3545092998&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2938475935,494365371&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2993102968,3842465638&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3013203751,4239362152&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3141855683,1861750766&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3239530577,4193437809&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=329070808,86852626&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3297893164,2217516522&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3316087371,2926213091&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=332246444,1507500665&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3370156790,615167794&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3371178617,2710446148&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3383972287,756138362&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3390303238,4034026498&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3400373425,3251980086&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3449886478,2679007697&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3456016953,3507827386&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3481107770,619486040&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3542561095,3468393831&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3543637573,557726563&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3546592981,1633951885&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3577384590,398031169&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3624156501,2764300074&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3673559089,1271914159&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=369328761,3794173769&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3718637818,1153606205&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3722583156,2601743867&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3729327424,4113608388&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3731989423,3855350052&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3754718161,1365571070&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3783765691,525464974&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3803044037,3649749852&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3804567480,3385166150&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3820464411,1190315362&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3831671411,1704264624&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3843445883,2974888073&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=4158271824,700166083&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=827186358,3891648910&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/201901/15.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201901/15.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/7a1964828c415caad89339a5319e374d.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/7a1964828c415caad89339a5319e374d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/b65ca05cac2de982c1d14f6332f7106f.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/b65ca05cac2de982c1d14f6332f7106f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/bd80b6b35049d4a6eae68fcc92a03158.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/bd80b6b35049d4a6eae68fcc92a03158.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,15 +112,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/updatetag.html">
+        <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state relative-caret-position="174">
+              <caret line="6" column="109" selection-start-line="6" selection-start-column="92" selection-end-line="6" selection-end-column="109" />
               <folding>
-                <element signature="n#style#0;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#1135#1141#0" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/datainput/imageupload.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="11" column="173" selection-start-line="11" selection-start-column="173" selection-end-line="11" selection-end-column="173" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/select.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="49" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#strong#0;n#span#3;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,20 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Dataconfiguration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="486" column="28" selection-start-line="486" selection-start-column="25" selection-end-line="486" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/uploadimg.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="73" column="82" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="82" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="928">
+              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -61,13 +171,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>uploadimg</find>
-      <find>selectId</find>
       <find>experience</find>
       <find>adddata</find>
       <find>请选择标签</find>
       <find>rendomSelectByMachine</find>
       <find>tree</find>
+      <find>selectId</find>
       <find>tag</find>
+      <find>ids</find>
+      <find>session</find>
+      <find>id</find>
+      <find>$manmadetags</find>
+      <find>reset0</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,28 +191,33 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/database.php" />
         <option value="$PROJECT_DIR$/application/index/view/dataconfiguration/uploadimg.html" />
-        <option value="$PROJECT_DIR$/application/index/validate/Pic.php" />
         <option value="$PROJECT_DIR$/application/index/controller/Tagbase.php" />
-        <option value="$PROJECT_DIR$/application/index/view/dataconfiguration/select.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/Dataconfiguration.php" />
+        <option value="$PROJECT_DIR$/application/database.php" />
+        <option value="$PROJECT_DIR$/application/index/view/auth/authrule.html" />
+        <option value="$PROJECT_DIR$/application/index/validate/Pic.php" />
         <option value="$PROJECT_DIR$/application/index/view/dataconfiguration/updatetag.html" />
+        <option value="$PROJECT_DIR$/application/common.php" />
+        <option value="$PROJECT_DIR$/application/index/model/Pic.php" />
+        <option value="$PROJECT_DIR$/application/index/view/dataconfiguration/select.html" />
+        <option value="$PROJECT_DIR$/application/index/controller/Datainput.php" />
+        <option value="$PROJECT_DIR$/application/index/view/datainput/patch.html" />
+        <option value="$PROJECT_DIR$/application/index/view/datainput/imageupload.html" />
+        <option value="$PROJECT_DIR$/application/index/controller/Dataconfiguration.php" />
+        <option value="$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="133" />
-    <option name="y" value="-23" />
-    <option name="width" value="1606" />
-    <option name="height" value="1027" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="2488" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,6 +248,20 @@
               <item name="mmm" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -138,10 +272,27 @@
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="dataconfiguration" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mmm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="datainput" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="tagbase" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,6 +300,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -174,17 +326,20 @@
       <updated>1547514982612</updated>
       <workItem from="1547514986282" duration="2737000" />
       <workItem from="1547531284005" duration="6850000" />
+      <workItem from="1547563390716" duration="7466000" />
+      <workItem from="1547904791086" duration="213000" />
+      <workItem from="1547991380786" duration="3636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9587000" />
+    <option name="totallyTimeSpent" value="20902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="2488" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25431967" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17023908" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -209,27 +364,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/index/validate/Pic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/auth/authrule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="22" selection-end-line="80" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-422" />
@@ -252,43 +386,140 @@
         <state relative-caret-position="-806" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/select.html">
+    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/uploadimg.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="52" column="55" lean-forward="true" selection-start-line="52" selection-start-column="55" selection-end-line="52" selection-end-column="55" />
+        <state relative-caret-position="-11">
+          <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="34" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#81#87#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/uploadimg.html">
+    <entry file="file://$PROJECT_DIR$/application/index/view/tagbase/addparenttag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="73" column="82" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="82" />
+        <state relative-caret-position="309">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/hui/static/h-ui/css/H-ui.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="11" column="2971" selection-start-line="11" selection-start-column="2971" selection-end-line="11" selection-end-column="2971" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/adduser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/authrule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/Pic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/validate/Pic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/updatetag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/datainput/patch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="17" column="19" selection-end-line="76" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Datainput.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#3;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Dataconfiguration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="486" column="28" selection-start-line="486" selection-start-column="25" selection-end-line="486" selection-end-column="28" />
+        <state relative-caret-position="928">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/updatetag.html">
+    <entry file="file://$PROJECT_DIR$/application/index/view/datainput/imageupload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        <state relative-caret-position="319">
+          <caret line="11" column="173" selection-start-line="11" selection-start-column="173" selection-end-line="11" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="109" selection-start-line="6" selection-start-column="92" selection-end-line="6" selection-end-column="109" />
           <folding>
-            <element signature="n#style#0;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#1135#1141#0" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

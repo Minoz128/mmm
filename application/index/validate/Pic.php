@@ -12,7 +12,7 @@ use think\Validate;
 class Pic extends Validate{
     //什么场景
     protected $scene=[
-
+        'updateManMade' => ['manmadetags'],
         'add' => ['uid','type'],
     ];
 

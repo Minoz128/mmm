@@ -1,0 +1,76 @@
+{include file='public/header'}
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据预处理 <span class="c-gray en">&gt;</span> 数据筛选 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c">
+        当前总数据 : <span><strong><a style="color:lightseagreen;text-decoration:underline" href="{:url('Dataconfiguration/select',['status'=>2])}">{$allCount}</a></strong></span> 条
+        已审核数据 : <span><strong><a style="color:green;text-decoration:underline" href="{:url('Dataconfiguration/select',['status'=>1])}">{$status1Count}</a></strong></span> 条
+        未审核数据 : <span><strong><a style="color:red;text-decoration:underline" href="{:url('Dataconfiguration/select',['status'=>0])}">{$status0Count}</a></strong></span> 条
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20">
+            <span class="l">
+                <a class="btn btn-success radius" onclick="layer_show('批量导入图片接口','{:url(\'Dataconfiguration/uploadimg\')}','','500')" href='javascript:void(0)'> 批量导入图片接口</a>
+                <a class="btn btn-warning radius" onclick="DelConfirm()"> 一键删除所有图片信息</a>
+            </span>
+    </div>
+    <div class="mt-20">
+        <table class="my-table table table-border table-bordered table-bg table-hover table-sort">
+            <thead>
+            <tr class="text-c">
+                <th width="10"><input name="" type="checkbox" value=""></th>
+                <th width="20">ID</th>
+                <th width="70">分类</th>
+                <th width="100">图像</th>
+                <th width="60">发布状态</th>
+                <th width="55">信息上传人</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="allData" id="vo"}
+            <tr class="text-c">
+                <td><input name="" type="checkbox" value=""></td>
+                <td>{$vo.id}</td>
+                <td>{$vo.type|type}</td>
+                <td><a href="__PUBLIC__{$vo.src}" target="_blank"><img width="100" class="picture-thumb" src="__PUBLIC__{$vo.src}"></a></td>
+                <td class="td-status">{$vo.status|status}</td>
+                <td>{$vo.uid|getuserbyuid}</td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{include file='public/footer'}
+<script type="text/javascript">
+    var table = $(".my-table").dataTable({
+
+    });
+
+    $(document).ready(function () {
+        $('.uploadifive-button').css({'top':'7px','display':'inline-block'});
+    });
+
+    function DelConfirm() {
+        var url = "{:url('dataconfiguration/delimages',['status'=>'del'])}";
+        layer.confirm(
+            "此操作会清空数据库和文件系统保留的图片信息，操作不可逆，确定执行吗？",
+            {btn: ['确定','取消']},
+            function(index){
+                $.get(url,function (result) {
+                    if(result.status == 1){
+                        window.location.reload();
+                    }
+                },'JSON');
+            },
+            function(index){
+                layer.close(index);
+            }
+        );
+    }
+
+
+</script>
+
+</html>

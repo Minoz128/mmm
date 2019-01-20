@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:95:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/uploadimg.html";i:1547225738;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:95:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/uploadimg.html";i:1547515580;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -140,9 +140,7 @@
         var brief = $("#brief").val();
         //var src = $("#upload_img").attr("relative-src");
 
-        if(!text){
-            dialog.error("请选择标签"); return;
-        }
+
         var imgcount = $("#appendImgList img").size();
         if(imgcount == 0){
             dialog.error("请上传图片"); return;

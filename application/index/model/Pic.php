@@ -15,7 +15,7 @@ class Pic extends Model{
     }
 
     public function reset0(){
-        return $this->execute("update m_pic set status=0,tag=null,resulterr=null");
+        return $this->execute("update m_pic set status=0,tag=null,manmadetags=null,resulterr=null");
     }
 
     public function selectByWhere($where){

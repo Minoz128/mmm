@@ -84,7 +84,17 @@ function manmadetags($manmadetags){
     $res = \think\Db::name("tagbase")->field('tagname')->where('id','in',explode(",",$manmadetags))->select();
     $title = "";
     foreach ($res as $key=>$value){
-        $title.= '<span class="btn btn-default size-S radius">'.$value['tagname'].'</span> ';
+        $title.= '<span class="btn btn-success-outline radius size-S">'.$value['tagname'].'</span> ';
+    }
+    $title = substr($title,0,-1);
+    return $title;
+}
+
+function mechinetags($mechinetags){
+    $res = \think\Db::name("tagbase")->field('tagname')->where('id','in',explode(",",$mechinetags))->select();
+    $title = "";
+    foreach ($res as $key=>$value){
+        $title.= '<span class="btn btn-warning-outline radius size-S">'.$value['tagname'].'</span> ';
     }
     $title = substr($title,0,-1);
     return $title;
