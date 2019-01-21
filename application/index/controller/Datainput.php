@@ -9,9 +9,30 @@
 namespace app\index\controller;
 use think\Controller;
 
+set_time_limit(0);
 class Datainput extends Controller{
     public function imageupload(){
-        $allData = model('Pic')->getAllData("1=1");
+        $status = input('get.status',0,'intval');
+        $str = "";
+        switch ($status){
+            //待审核
+            case "0":
+                $str = " status=0";
+                break;
+            //已审核
+            case "1":
+                $str = " status=1";
+                break;
+            //查看所有数据
+            case "2":
+                $str = " 1=1";
+                break;
+            default :
+                $str = " status=0";
+                break;
+        }
+
+        $allData = model('Pic')->getAllData($str);
         $allCount = count($allData);
         $status0Data = model('Pic')->selectByWhere("status='0'");
         $status0Count = $status0Data[0]['count'];
@@ -29,7 +50,26 @@ class Datainput extends Controller{
     }
 
     public function patch(){
-        $allData = model('Pic')->getAllData("1=1");
+        $status = input('get.status',0,'intval');
+        $str = "";
+        switch ($status){
+            //待审核
+            case "0":
+                $str = " status=0";
+                break;
+            //已审核
+            case "1":
+                $str = " status=1";
+                break;
+            //查看所有数据
+            case "2":
+                $str = " 1=1";
+                break;
+            default :
+                $str = " status=0";
+                break;
+        }
+        $allData = model('Pic')->getAllData($str);
         $allCount = count($allData);
         $status0Data = model('Pic')->selectByWhere("status='0'");
         $status0Count = $status0Data[0]['count'];

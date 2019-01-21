@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:89:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/datainput/imageupload.html";i:1547996928;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:89:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/datainput/imageupload.html";i:1548077801;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -31,14 +31,14 @@
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据预处理 <span class="c-gray en">&gt;</span> 数据筛选 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <div class="text-c">
-        当前总数据 : <span><strong><a style="color:lightseagreen;text-decoration:underline" href="<?php echo url('Dataconfiguration/select',['status'=>2]); ?>"><?php echo $allCount; ?></a></strong></span> 条
-        已审核数据 : <span><strong><a style="color:green;text-decoration:underline" href="<?php echo url('Dataconfiguration/select',['status'=>1]); ?>"><?php echo $status1Count; ?></a></strong></span> 条
-        未审核数据 : <span><strong><a style="color:red;text-decoration:underline" href="<?php echo url('Dataconfiguration/select',['status'=>0]); ?>"><?php echo $status0Count; ?></a></strong></span> 条
+        当前总数据 : <span><strong><a style="color:lightseagreen;text-decoration:underline" href="<?php echo url('Datainput/imageupload',['status'=>2]); ?>"><?php echo $allCount; ?></a></strong></span> 条
+        已审核数据 : <span><strong><a style="color:green;text-decoration:underline" href="<?php echo url('Datainput/imageupload',['status'=>1]); ?>"><?php echo $status1Count; ?></a></strong></span> 条
+        未审核数据 : <span><strong><a style="color:red;text-decoration:underline" href="<?php echo url('Datainput/imageupload',['status'=>0]); ?>"><?php echo $status0Count; ?></a></strong></span> 条
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20">
             <span class="l">
                 <a class="btn btn-success radius" onclick="layer_show('批量导入图片接口','<?php echo url('Dataconfiguration/uploadimg'); ?>','','500')" href='javascript:void(0)'> 批量导入图片接口</a>
-                <a class="btn btn-secondary radius" onclick="layer_show('百度图片爬取','<?php echo url('Dataconfiguration/patch'); ?>','','350')" href='javascript:void(0)'> 爬虫在线爬取图片接口</a>
+                 <a class="btn btn-secondary radius" onclick="layer_show('百度图片爬取','<?php echo url('Dataconfiguration/patch'); ?>','','350')" href='javascript:void(0)'> 爬虫在线爬取图片接口</a>
                 <a class="btn btn-warning radius" onclick="DelConfirm()"> 一键删除所有图片信息</a>
             </span>
     </div>

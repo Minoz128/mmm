@@ -445,7 +445,7 @@ class Dataconfiguration extends Controller{
                 }
             }
         }
-        $this->success("已获取机器生成标签接口的数据");
+        $this->success("已获取机器生成标签接口提供的数据");
     }
 
 

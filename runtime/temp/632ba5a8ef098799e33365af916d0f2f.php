@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:94:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/tagbyman.html";i:1547998531;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:94:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/tagbyman.html";i:1548086138;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,11 +36,10 @@
         未标注数据 : <span><strong><a style="color:red;text-decoration:underline" href="<?php echo url('Dataconfiguration/select',['status'=>5]); ?>"><?php echo $status0Count; ?></a></strong></span> 条
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20">
-            <span class="l">
-                <a class="btn btn-success radius" onclick="layer_show('批量导入图片接口','<?php echo url('Dataconfiguration/uploadimg'); ?>','','500')" href='javascript:void(0)'> 批量导入图片接口</a>
-                <a class="btn btn-secondary radius" onclick="layer_show('百度图片爬取','<?php echo url('Dataconfiguration/patch'); ?>','','350')" href='javascript:void(0)'> 爬虫在线爬取图片接口</a>
-                <a class="btn btn-warning radius" onclick="DelConfirm()"> 一键删除所有图片信息</a>
-            </span>
+        <span class="l">
+            <a class="btn btn-primary-outline radius" href="<?php echo url('Dataconfiguration/rendomSelectByMachine'); ?>"> 获取机器学习识别结果数据接口</a>
+            <a class="btn btn-warning radius" href="<?php echo url('Dataconfiguration/reset0'); ?>"> 重置数据</a>
+        </span>
     </div>
     <div class="mt-20">
         <table class="my-table table table-border table-bordered table-bg table-hover table-sort">
@@ -50,6 +49,7 @@
                 <th width="20">ID</th>
                 <th width="70">分类</th>
                 <th width="100">图像</th>
+                <th width="100">机器判定</th>
                 <th width="60">发布状态</th>
                 <th width="55">信息上传人</th>
             </tr>
@@ -61,6 +61,7 @@
                 <td><?php echo $vo['id']; ?></td>
                 <td><?php echo type($vo['type']); ?></td>
                 <td><a href="/mmm/public<?php echo $vo['src']; ?>" target="_blank"><img width="100" class="picture-thumb" src="/mmm/public<?php echo $vo['src']; ?>"></a></td>
+                <td class="text-c"><?php echo mechinetags($vo['tag']); ?></td>
                 <td class="td-status"><?php echo status($vo['status']); ?></td>
                 <td><?php echo getuserbyuid($vo['uid']); ?></td>
             </tr>
@@ -93,23 +94,7 @@
         $('.uploadifive-button').css({'top':'7px','display':'inline-block'});
     });
 
-    function DelConfirm() {
-        var url = "<?php echo url('dataconfiguration/delimages',['status'=>'del']); ?>";
-        layer.confirm(
-            "此操作会清空数据库和文件系统保留的图片信息，操作不可逆，确定执行吗？",
-            {btn: ['确定','取消']},
-            function(index){
-                $.get(url,function (result) {
-                    if(result.status == 1){
-                        window.location.reload();
-                    }
-                },'JSON');
-            },
-            function(index){
-                layer.close(index);
-            }
-        );
-    }
+
 
 
 </script>

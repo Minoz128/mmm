@@ -3,9 +3,9 @@
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据预处理 <span class="c-gray en">&gt;</span> 数据筛选 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <div class="text-c">
-        当前总数据 : <span><strong><a style="color:lightseagreen;text-decoration:underline" href="{:url('Dataconfiguration/select',['status'=>2])}">{$allCount}</a></strong></span> 条
-        已审核数据 : <span><strong><a style="color:green;text-decoration:underline" href="{:url('Dataconfiguration/select',['status'=>1])}">{$status1Count}</a></strong></span> 条
-        未审核数据 : <span><strong><a style="color:red;text-decoration:underline" href="{:url('Dataconfiguration/select',['status'=>0])}">{$status0Count}</a></strong></span> 条
+        当前总数据 : <span><strong><a style="color:lightseagreen;text-decoration:underline" href="{:url('Datainput/patch',['status'=>2])}">{$allCount}</a></strong></span> 条
+        已审核数据 : <span><strong><a style="color:green;text-decoration:underline" href="{:url('Datainput/patch',['status'=>1])}">{$status1Count}</a></strong></span> 条
+        未审核数据 : <span><strong><a style="color:red;text-decoration:underline" href="{:url('Datainput/patch',['status'=>0])}">{$status0Count}</a></strong></span> 条
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20">
             <span class="l">

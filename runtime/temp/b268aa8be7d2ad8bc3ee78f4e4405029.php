@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:82:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/auth/authgroup.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:82:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/auth/authgroup.html";i:1548076829;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -32,15 +32,6 @@
 <div class="page-container">
     <div class="text-c">
         <button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
-        <span class="select-box inline">
-		<select name="" class="select">
-			<option value="0">全部分类</option>
-			<option value="1">分类一</option>
-			<option value="2">分类二</option>
-		</select>
-
-        <input type="text" name="" id="" placeholder=" 资讯名称" style="width:250px" class="input-text">
-        <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜资讯</button>
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" data-title="添加用户组" data-href="" onclick="layer_show('添加信息','<?php echo url('auth/addgroup'); ?>','','300')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加用户组</a> <a class="btn btn-primary radius" data-title="编辑用户组权限" data-href="" onclick="layer_show('编辑用户组权限','<?php echo url('auth/authrule'); ?>','','450')" href="javascript:;"><i class="Hui-iconfont">&#xe627;</i> 编辑用户组权限</a></span> <span class="r">共有数据：<strong><?php echo $count; ?></strong> 条</span> </div>
     <div class="mt-20">
