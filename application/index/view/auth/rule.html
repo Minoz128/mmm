@@ -1,0 +1,40 @@
+{include file="public/header"}
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统设置 <span class="c-gray en">&gt;</span> 栏目设置 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c">
+        <button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" data-title="添加父节点" data-href="" onclick="layer_show('添加父节点','{:url('auth/addfatherrule')}','','400')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加父节点</a> <a class="btn btn-primary radius" data-title="添加子节点" data-href="" onclick="layer_show('添加子节点','{:url('auth/addsonrule')}','','450')" href="javascript:;"><i class="Hui-iconfont">&#xe627;</i> 添加子节点</a></span> <span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
+    <div class="mt-20">
+        <table class="my-table table table-border table-bordered table-bg table-hover table-sort table-responsive">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="25">ID</th>
+                <th width="80">名称</th>
+                <th width="100">url</th>
+                <th width="120">发布状态</th>
+                <th width="80">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="data" id="vo"}
+            <tr class="text-c">
+                <td><input type="checkbox" value="" name=""></td>
+                <td>{$vo.id}</td>
+                <td>{$vo.title}</td>
+                <td>{$vo.name}</td>
+                <td class="td-status"><a href="{:url('Auth/rulestatus',['id'=>$vo.id,'status'=>$vo.status==1?0:1])}">{$vo.status|commonstatus}</a></td>
+                <td class="f-14 td-manage"><a {if condition="$vo.nid neq 0"} style="display: none" {/if}href="{:url('Auth/rule',['id'=>$vo.id])}">查看对应的子节点</a> <a {if condition="$vo.id eq 1"} style="display: none" {/if} style="text-decoration:none" class="ml-5" onClick="layer_show('编辑','{:url(\'auth/editrule\',[\'id\'=>$vo.id])}','','300')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a></td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{include file="public/footer"}
+<script>
+
+</script>

@@ -9,6 +9,9 @@
 namespace app\index\controller;
 use think\Controller;
 use think\Exception;
+use think\Validate;
+use think\Db;
+
 
 class Auth extends Controller{
     /**
@@ -155,6 +158,7 @@ class Auth extends Controller{
      * 获取用户组权限
      */
     public function authrule(){
+
         if(request()->isPost()){
             $id = input('post.id');
             $tmp = model('AuthGroup')->get($id);
@@ -166,9 +170,10 @@ class Auth extends Controller{
             }
         }else{
             if(session('tree')){
+                $this->autoUpdateSessionAllNodeTree();
                 $groups = model('AuthGroup')->getAllData();
                 return $this->fetch('',[
-                    'tree' => session('tree'),
+                    'tree' => session('allNodeTree'),
                     'groups' => $groups,
                 ]);
             }else{
@@ -314,6 +319,184 @@ class Auth extends Controller{
             }
         }else{
             $this->error("状态标识不合法");
+        }
+    }
+
+    //分配栏目页面
+    public function rule(){
+        $id = input('get.id',0,'intval');
+        $data = model('AuthRule')->getAllData($id);
+        $count = count($data);
+        return $this->fetch('',[
+            'data' => $data,
+            'count' => $count
+        ]);
+    }
+
+    //栏目页修改状态
+    public function rulestatus(){
+        $data = input('get.');
+        if(is_array($data) && is_numeric($data['id']) && is_numeric($data['status'])){
+            $id = $data['id'];
+            $status = $data['status'];
+            if(!Validate('AuthRule')->scene('updatestatus')->check($data)){
+                return $this->error(Validate('AuthRule')->getError());
+            }
+            $res = model('AuthRule')->save(['status'=>$status],['id'=>$id]);
+            if($res){
+                return $this->success("修改成功");
+            }
+        }
+    }
+
+    public function addfatherrule(){
+        //添加父节点的逻辑
+        if(request()->isPost()){
+            $data = input('post.');
+            if(is_array($data)){
+                $name = $data['name'];
+                $title = $data['title'];
+                if(!Validate('AuthRule')->scene('addFather')->check($data)){
+                    return show(0,Validate('AuthRule')->getError());
+                }
+                $res = model('AuthRule')->checkRepeatName($name);
+                if($res){
+                    return show(0,'当前已存在相同名URL，请更换');
+                }
+                $res1 = model('AuthRule')->checkRepeatTitle($title);
+                if($res1){
+                    return show(0,'当前已存在相同名称，请更换');
+                }
+                try{
+                    $result = model('AuthRule')->save($data);
+                    if($result){
+                        $this->autoUpdateSessionAllNodeTree();
+                        return show(1,"添加成功");
+                    }else{
+                        return show(0,"添加失败");
+                    }
+                }catch(Exception $e){
+                    return show(0,$e->getMessage());
+                }
+            }
+        }else{
+            //加载页面
+            return $this->fetch();
+        }
+
+    }
+
+    public function addsonrule(){
+        if(request()->isPost()){
+            $data = input('post.');
+            if(is_array($data)){
+                $name = $data['name'];
+                $title = $data['title'];
+                if(!Validate('AuthRule')->scene('addSon')->check($data)){
+                    return show(0,Validate('AuthRule')->getError());
+                }
+                $res = model('AuthRule')->checkRepeatName($name);
+                if($res){
+                    return show(0,'当前已存在相同名URL，请更换');
+                }
+                $res1 = model('AuthRule')->checkRepeatTitle($title);
+                if($res1){
+                    return show(0,'当前已存在相同名称，请更换');
+                }
+                try{
+                    $result = model('AuthRule')->save($data);
+                    if($result){
+                        $this->autoUpdateSessionAllNodeTree();
+                        return show(1,"添加成功");
+                    }else{
+                        return show(0,"添加失败");
+                    }
+                }catch(Exception $e){
+                    return show(0,$e->getMessage());
+                }
+            }
+
+        }else{
+            $fatherData = model('AuthRule')->getAllData(0);
+            return $this->fetch('',[
+                'fatherdata' => $fatherData
+            ]);
+        }
+
+    }
+
+    //自动更新左侧导航栏session
+    public function autoUpdateSessionAllNodeTree(){
+        session('allNodeTree',null);
+        $auth = new \think\Auth();
+        $info = Db::name('auth_rule')->where('status','eq',1)->select();
+        $tree = [];
+        //筛选父子关系一一对应的节点
+        foreach ($info as $key=>$value){
+            if($value['nid'] == 0){
+                $tree[] = $value;
+            }
+        }
+
+        foreach ($tree as $treeKey=>$treeValue){
+            foreach ($info as $infoKey=>$infoValue){
+                if($treeValue['id'] == $infoValue['nid']){
+                    $tree[$treeKey]['children'][] = $infoValue;
+                }
+            }
+        }
+
+        //左侧权限栏存储到session中
+        session('allNodeTree',$tree);
+        return 'success';
+    }
+
+    public function editrule($id){
+        if(is_numeric($id)){
+            $data = model('AuthRule')->get($id);
+            if($data['nid'] == 0){
+                return $this->fetch('editfatherrule',[
+                    'data' => $data
+                ]);
+            }else{
+                $fatherData = model('AuthRule')->getAllData(0);
+                return $this->fetch('',[
+                    'fatherData' => $fatherData,
+                    'data' => $data
+                ]);
+            }
+        }
+    }
+
+    public function editfatherrule(){
+        if(request()->isPost()){
+            $data = input('post.');
+            $id = input('post.id');
+            $name = input('post.name');
+            $title = input('post.title');
+            if(is_array($data)){
+                $res = model('AuthRule')->checkRepeatUnlessSeifId($id,$name,$title);
+                if($res){
+                    return show(0,"当前已存在相同栏目名或者url,请更换");
+                }
+                if(!Validate('AuthRule')->scene('updatefatherrule')->check($data)){
+                    return show(0,Validate('AuthRule')->getError());
+                }
+                try{
+                    $result = model('AuthRule')->save($data,['id'=>$id]);
+                    if($result){
+                        $this->autoUpdateSessionAllNodeTree();
+                        return show(1,"更新成功");
+                    }
+                    else{
+                        return show(0,"更新失败");
+                    }
+                }catch(Exception $e){
+                    return show(0,$e->getMessage());
+                }
+            }else{
+                return show(0,"数据不合法");
+            }
         }
     }
 

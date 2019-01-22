@@ -2,17 +2,189 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f81c1bc-c2af-415f-92fa-e6b1ec660489" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/index/model/AuthRule.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/validate/AuthRule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/Datainput.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Datainput.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/auth/authgroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/auth/authgroup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/datainput/imageupload.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/datainput/imageupload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/datainput/patch.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/datainput/patch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/log/201901/20.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201901/20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/117efa14092d9c4a71b6170dfa3e5a11.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/117efa14092d9c4a71b6170dfa3e5a11.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/632ba5a8ef098799e33365af916d0f2f.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/632ba5a8ef098799e33365af916d0f2f.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/6e04dcfcf8c008fc6086ae7c5a95c8ac.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/6e04dcfcf8c008fc6086ae7c5a95c8ac.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/b268aa8be7d2ad8bc3ee78f4e4405029.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/b268aa8be7d2ad8bc3ee78f4e4405029.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=100384662,3038728268&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1037084821,2792048717&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1060473446,190171183&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1092403856,1708010568&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1125704962,146266294&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1230082648,3479733448&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=123162225,878928114&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1242253813,1771189878&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=125345184,2566296676&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1267326413,4177076113&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1273934264,733606758&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1296924733,261806827&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1316654761,2978902337&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=131840351,1847726461&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1325158328,781796011&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1327091321,3689209379&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=13340956,1873075733&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1369417435,3740211473&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1376950597,661501710&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1378390908,1295063724&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1443210944,1219278671&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1448786386,716665333&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1463646371,2979431951&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1523518955,2789971973&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1541527982,507621349&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1561190957,1810244280&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1567554625,2237165066&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1568984277,3787703295&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1621331718,2986802414&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1665227046,3713810017&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1687373623,299564290&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1689426232,3052982410&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=170873285,3781610603&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1745725353,2701212414&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1756891089,3033141516&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1784571096,2643553439&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1802639678,711966322&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1805270908,408011698&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1822731675,1350840533&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1838844531,1574258579&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1847446033,114018673&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1861734973,580134713&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1889825312,1862728990&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1911308230,2254577648&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1921333588,2829382435&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1931089415,2890038569&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1941237485,1952211612&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1976239647,2873296835&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1982492694,1268927779&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1987047350,2206867649&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1990294344,1911949286&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=1992785949,3455097892&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2013443761,1807271457&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2031382282,2815924641&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2075610839,2884856722&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2082394878,1903345297&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2102898436,1519451212&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=211187705,3628844754&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2114429266,1026762781&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2118968536,219408899&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2123126189,2327617484&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2157405279,2336231639&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=218330420,16140369&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2190023570,270009273&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2191727160,2885899536&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2226811881,2676486337&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=22273245,272330014&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2247036241,243605489&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2269251904,1182553882&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2280463910,3260688022&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2299751933,454540929&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2305595422,1547210110&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2336244487,1881135035&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2346960736,1433734950&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2347982167,2229548037&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2400208890,1778482321&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2430521858,2680874223&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2481413271,2253501225&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2501713228,822735177&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2520627683,496386327&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=252315101,66879399&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2530259107,3550452971&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2530461469,4178072197&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2552651698,3498937331&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2566564079,2955182243&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2573258383,3097855554&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2584446920,3194419519&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2615293269,244159163&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2629588177,2668748602&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=263542035,719835986&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=264630957,3465470252&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2651284806,1503127009&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2651400166,1285303024&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=266000392,3982402435&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2679408882,2543808909&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2686716272,2604207418&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2699472818,2468902956&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2710777969,4134895258&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2713166814,2478585299&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2718442748,3751238737&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2722398323,4276078660&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2731456225,2543409061&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2738626920,157151572&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2747827792,2457565428&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2809232486,2186629937&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2826742895,3103883741&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2862674107,1679172216&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2864345339,1052193935&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2873668773,909804925&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2914238801,1020237878&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2965212255,3923149784&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=2997692506,332741065&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3003020031,1224005865&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3005657130,417259481&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3093505911,709757391&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3109993657,1367890184&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3110556434,2743377563&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3118552062,1968072583&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3138019092,2606641644&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3152703281,4156189011&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3160312597,4069147357&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3169984375,4221884828&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3184379481,4038057224&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3208486930,2962776711&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3224683769,3902330613&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=323647705,707503219&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3244460829,667693882&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=325659540,3947679398&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3295824297,625456553&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3315902572,3218828233&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3337700063,1523582155&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3350437476,49703933&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=335453189,2052072572&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3368978375,2128143043&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=337415164,3962771150&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3402847872,3071334627&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3403887689,2730645081&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=341402511,2223978673&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3439666185,669289276&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3445581957,3334803557&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=345306214,1777583191&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3464977464,2543105908&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3488642900,3197683258&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3495906799,1426580875&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3502252972,3808745982&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3525859825,2131526022&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3560710817,2606004642&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3571831983,2057644503&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3571902001,384862529&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3626181443,3218044288&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=362935741,2042450357&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3644513728,4212424493&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3655523710,4208826047&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3685443101,919844851&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3690229622,2975567455&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3692940869,1030233559&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3695340547,1015508204&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3705032977,2346462958&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3722369287,342991226&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3737805938,979295849&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3739100452,3607576393&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3754436706,221900668&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=375661225,2642037524&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3761703541,3424577052&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3811585368,2677748339&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3835601177,3423014440&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3867486222,323769622&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3896574914,1696685668&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=3975542249,3896438336&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=4068951018,2767258803&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=4114694399,595873081&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=4128868973,1979543556&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=530502065,1948822807&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=609329430,3912753808&amp;fm=11&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=634994228,1053158147&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=761585048,1757231181&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=783719155,821183414&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/patch/u=841003733,2292496595&amp;fm=15&amp;gp=0.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,32 +198,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html">
+        <entry file="file://$PROJECT_DIR$/application/index/controller/Auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
+            <state relative-caret-position="-2494">
+              <caret line="372" column="46" selection-start-line="372" selection-start-column="46" selection-end-line="372" selection-end-column="46" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="e#120#141#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/select.html">
+        <entry file="file://$PROJECT_DIR$/application/index/view/auth/editfatherrule.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="19" column="128" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="128" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#strong#0;n#span#3;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="935">
+              <caret line="48" column="52" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -59,10 +221,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Dataconfiguration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="428" column="34" selection-start-line="428" selection-start-column="13" selection-end-line="428" selection-end-column="34" />
+            <state relative-caret-position="13108">
+              <caret line="460" column="27" lean-forward="true" selection-start-line="460" selection-start-column="27" selection-end-line="460" selection-end-column="27" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/auth/addfatherrule.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="579">
+              <caret line="20" column="33" selection-end-line="50" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/auth/rule.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="812">
+              <caret line="28" column="308" selection-start-line="28" selection-start-column="300" selection-end-line="28" selection-end-column="308" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/validate/AuthRule.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/model/AuthRule.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="928">
+              <caret line="37" column="116" selection-start-line="37" selection-start-column="116" selection-end-line="37" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/model/AuthGroupAccess.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -90,6 +297,9 @@
       <find>reset0</find>
       <find>patch</find>
       <find>rendomSelectByMachine</find>
+      <find>allData</find>
+      <find>status</find>
+      <find>authrule</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,9 +320,18 @@
         <option value="$PROJECT_DIR$/application/index/view/datainput/patch.html" />
         <option value="$PROJECT_DIR$/application/index/view/auth/authgroup.html" />
         <option value="$PROJECT_DIR$/application/index/view/datainput/imageupload.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/Dataconfiguration.php" />
         <option value="$PROJECT_DIR$/application/index/view/dataconfiguration/select.html" />
         <option value="$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html" />
+        <option value="$PROJECT_DIR$/application/index/controller/Dataconfiguration.php" />
+        <option value="$PROJECT_DIR$/application/index/view/auth/addfatherrule.html" />
+        <option value="$PROJECT_DIR$/application/index/view/auth/addSonrule.html" />
+        <option value="$PROJECT_DIR$/application/index/view/auth/addsonrule.html" />
+        <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
+        <option value="$PROJECT_DIR$/application/index/view/auth/rule.html" />
+        <option value="$PROJECT_DIR$/application/index/view/auth/editfatherrule.html" />
+        <option value="$PROJECT_DIR$/application/index/model/AuthRule.php" />
+        <option value="$PROJECT_DIR$/application/index/validate/AuthRule.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/Auth.php" />
       </list>
     </option>
   </component>
@@ -156,6 +375,20 @@
               <item name="mmm" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -164,7 +397,7 @@
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="dataconfiguration" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,18 +440,19 @@
       <workItem from="1547563390716" duration="7466000" />
       <workItem from="1547904791086" duration="213000" />
       <workItem from="1547991380786" duration="4059000" />
-      <workItem from="1548076367306" duration="1202000" />
+      <workItem from="1548076367306" duration="1388000" />
+      <workItem from="1548162475635" duration="7086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22527000" />
+    <option name="totallyTimeSpent" value="29799000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2482" height="1417" extended-state="6" />
+    <frame x="0" y="23" width="2488" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17231405" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1743611" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -243,26 +477,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Tagbase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1848">
           <caret line="85" column="7" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6878" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-806" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/uploadimg.html">
@@ -305,17 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/auth/authrule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/model/Pic.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -342,23 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/auth/addgroup.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/auth/authgroup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="86" selection-start-line="5" selection-start-column="86" selection-end-line="5" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Datainput.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="886">
@@ -380,36 +571,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Dataconfiguration.php">
+    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="428" column="34" selection-start-line="428" selection-start-column="13" selection-end-line="428" selection-end-column="34" />
+        <state relative-caret-position="348">
+          <caret line="12" column="91" selection-start-line="12" selection-start-column="91" selection-end-line="12" selection-end-column="91" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/select.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="19" column="128" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="128" />
+        <state relative-caret-position="354">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="103" />
           <folding>
             <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#strong#0;n#span#3;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/dataconfiguration/tagbyman.html">
+    <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
+        <state relative-caret-position="-1790">
+          <caret line="366" column="20" selection-start-line="366" selection-start-column="20" selection-end-line="366" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/AuthGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/validate/AuthGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/validate/AuthGroupAccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/addgroup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="21" column="19" lean-forward="true" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/authrule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#strong#0;n#span#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#strong#0;n#span#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#0;n#table#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/addsonrule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="87" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/authgroup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="28" column="227" selection-start-line="28" selection-start-column="227" selection-end-line="28" selection-end-column="490" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/editfatherrule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/addfatherrule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="20" column="33" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/auth/rule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="28" column="308" selection-start-line="28" selection-start-column="300" selection-end-line="28" selection-end-column="308" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/AuthGroupAccess.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/AuthRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="37" column="116" selection-start-line="37" selection-start-column="116" selection-end-line="37" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/validate/AuthRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Login.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="913">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Dataconfiguration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13108">
+          <caret line="460" column="27" lean-forward="true" selection-start-line="460" selection-start-column="27" selection-end-line="460" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2494">
+          <caret line="372" column="46" selection-start-line="372" selection-start-column="46" selection-end-line="372" selection-end-column="46" />
+          <folding>
+            <element signature="e#120#141#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

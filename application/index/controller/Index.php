@@ -10,7 +10,7 @@ class Index extends Controller{
             $auth = new Auth();
             $groupInfo = $auth->getGroups(session("user")[0]['uid']);
             $rules = $groupInfo[0]['rules'];
-            $info = Db::name('auth_rule')->where('id','in',explode(',',$rules))->select();
+            $info = Db::name('auth_rule')->where('id','in',explode(',',$rules))->where('status','eq',1)->select();
             $tree = [];
             //筛选父子关系一一对应的节点
             foreach ($info as $key=>$value){
@@ -39,6 +39,7 @@ class Index extends Controller{
         }
 
     }
+
 
     public function welcome(){
         return '欢迎进入后台';
