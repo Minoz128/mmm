@@ -26,7 +26,7 @@
                 <td>{$vo.title}</td>
                 <td>{$vo.name}</td>
                 <td class="td-status"><a href="{:url('Auth/rulestatus',['id'=>$vo.id,'status'=>$vo.status==1?0:1])}">{$vo.status|commonstatus}</a></td>
-                <td class="f-14 td-manage"><a {if condition="$vo.nid neq 0"} style="display: none" {/if}href="{:url('Auth/rule',['id'=>$vo.id])}">查看对应的子节点</a> <a {if condition="$vo.id eq 1"} style="display: none" {/if} style="text-decoration:none" class="ml-5" onClick="layer_show('编辑','{:url(\'auth/editrule\',[\'id\'=>$vo.id])}','','300')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a></td>
+                <td class="f-14 td-manage"><a {if condition="$vo.nid neq 0"} style="display: none" {/if}href="{:url('Auth/rule',['id'=>$vo.id])}">查看对应的子节点</a> <a {if condition="$vo.id eq 3 or $vo.nid eq 3"} style="display: none" {/if} style="text-decoration:none" class="ml-5" onClick="layer_show('编辑','{:url(\'auth/editrule\',[\'id\'=>$vo.id])}','','350')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a></td>
             </tr>
             {/volist}
             </tbody>

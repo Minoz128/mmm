@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"C:\xampp\htdocs\mmm\public/../application/index\view\dataconfiguration\patch.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"C:\xampp\htdocs\mmm\public/../application/index\view\auth\editfatherrule.html";i:1548213631;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -27,54 +27,50 @@
     <meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
     <meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
-<body>
-<div class="page-container">
+<article class="page-container">
     <form class="form form-horizontal" id="form-mmm-add">
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传用户：</label>
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>父栏目名称：</label>
+            <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" attr-uid="<?php echo $user[0]['uid']; ?>" value="<?php echo $user[0]['username']; ?>" placeholder="<?php echo $user[0]['username']; ?>"  name="uid" readonly>
+                <input type="text" class="input-text" value="<?php echo $data['title']; ?>" placeholder="填写父栏目名称" id="title" name="title">
             </div>
         </div>
 
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>选择实验：</label>
-            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="" class="select selectId">
-					<option value="">-请选择实验-</option>
-                    <?php if(is_array($experience) || $experience instanceof \think\Collection || $experience instanceof \think\Paginator): $i = 0; $__LIST__ = $experience;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <option value="<?php echo $vo['id']; ?>">-<?php echo $vo['name']; ?>-</option>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-				</select>
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标识：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="<?php echo $data['name']; ?>" placeholder="填写标识" id="name" name="name">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>图标：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="<?php echo $data['icon']; ?>" placeholder="详见 http://www.h-ui.net/Hui-3.7-Hui-iconfont.shtml" id="icon" name="icon">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>状态：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <span class="select-box">
+                    <select name="status" class="select">
+                        <option value="1" <?php if($data['status'] == 1): ?> selected="selected"<?php endif; ?> >正常开启</option>
+                        <option value="0" <?php if($data['status'] == 0): ?> selected="selected"<?php endif; ?> >冻结</option>
+                    </select>
 				</span>
             </div>
         </div>
 
-
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>爬取数量：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text"  value="" placeholder="正整数，越多爬取耗时约长，取决于网速，一般推荐不超过60"  name="num" id="num">
-            </div>
-        </div>
-
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>关键字：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text"  value="" placeholder="输入关键字，随后系统提交百度图片检索并下载"  name="patchKeywords" id="patchKeywords">
-            </div>
-        </div>
-
-
-
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-                <button onClick="SubmitPatch()" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+                <button class="btn-form-submit btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
                 <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
             </div>
         </div>
     </form>
-</div>
+</article>
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="/mmm/public/static/hui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="/mmm/public/static/hui/static/h-ui/js/H-ui.min.js"></script>
@@ -89,36 +85,8 @@
 
 </body>
 <script>
-
-
-    function SubmitPatch() {
-        var patchKeywords = $("#patchKeywords").val();
-        var num = $("#num").val();
-
-        if(!patchKeywords){
-            dialog.error("请输入检索关键字！");return;
-        }
-        if(!num){
-            dialog.error("请填写预期爬取数量！");return;
-        }
-        if (!(/(^[1-9]\d*$)/.test(num))) {
-            dialog.error("预期爬取数量不合法，请填写正整数");return;
-        }
-        var index = layer.load(1, {
-            shade: [0.1,'#fff'] //0.1透明度的白色背景
-        });
-
-        var url = "<?php echo url('dataconfiguration/searchKeywordsAndDownload'); ?>";
-        var type = $(".selectId").val();
-        var data = {"num":num,"keywords":patchKeywords,"type":type};
-        console.log(data);
-        $.post(url,data,function (result) {
-            if(result.status == 1){
-                var data = result.data;
-                var str = "从百度图片(https://image.baidu.com/)库中爬取<span style='color:green'> " + data.num + "</span> 张图片" + ", 耗时<span style='color: green'> "+ data.time + " </span>秒" + ", 消耗内存 <span style='color: green'>" + data.memory_use +"Mb </span>";
-                dialog.success(str);
-            }
-        },"JSON");
+    var SCOPE = {
+        'form_add_url' : "<?php echo url('auth/editfatherrule'); ?>",
     }
 </script>
 </html>

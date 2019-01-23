@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"C:\xampp\htdocs\mmm\public/../application/index\view\dataconfiguration\uploadimg.html";i:1547515578;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1547209534;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"C:\xampp\htdocs\mmm\public/../application/index\view\dataconfiguration\uploadimg.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>

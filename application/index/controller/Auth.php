@@ -460,8 +460,8 @@ class Auth extends Controller{
                 ]);
             }else{
                 $fatherData = model('AuthRule')->getAllData(0);
-                return $this->fetch('',[
-                    'fatherData' => $fatherData,
+                return $this->fetch('editsonrule',[
+                    'fatherdata' => $fatherData,
                     'data' => $data
                 ]);
             }
@@ -484,18 +484,39 @@ class Auth extends Controller{
                 }
                 try{
                     $result = model('AuthRule')->save($data,['id'=>$id]);
-                    if($result){
-                        $this->autoUpdateSessionAllNodeTree();
-                        return show(1,"更新成功");
-                    }
-                    else{
-                        return show(0,"更新失败");
-                    }
+                    $this->autoUpdateSessionAllNodeTree();
+                    return show(1,"更新成功");
                 }catch(Exception $e){
                     return show(0,$e->getMessage());
                 }
             }else{
                 return show(0,"数据不合法");
+            }
+        }
+    }
+
+    public function editsonrule(){
+        if(request()->isPost()){
+            $data = input('post.');
+            if(is_array($data)){
+                $id = $data['id'];
+                $name = $data['name'];
+                $title = $data['title'];
+                $res = model('AuthRule')->checkRepeatUnlessSeifId($id,$name,$title);
+                if($res){
+                    return show(0,"当前已存在相同栏目名或者url,请更换");
+                }
+                if(!Validate('AuthRule')->scene('updatesonrule')->check($data)){
+                    return show(0,Validate('AuthRule')->getError());
+                }
+
+                try{
+                    model('AuthRule')->save($data,['id'=>$id]);
+                    $this->autoUpdateSessionAllNodeTree();
+                    return show(1,"更新成功");
+                }catch(Exception $e){
+                    return show(0,$e->getMessage());
+                }
             }
         }
     }

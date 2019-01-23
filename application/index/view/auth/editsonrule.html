@@ -1,6 +1,7 @@
 {include file="public/header"}
 <article class="page-container">
     <form class="form form-horizontal" id="form-mmm-add">
+        <input type="hidden" name="id" id="id" value="{$data.id}">
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>隶属于：</label>
             <div class="formControls col-xs-8 col-sm-9">
@@ -8,7 +9,7 @@
                     <select name="nid" class="select">
                         <option value="">-请选择-</option>
                         {volist name="fatherdata" id="vo"}
-                            <option value="{$vo.id}">{$vo.title}</option>
+                            <option value="{$vo.id}" {if condition="$data.nid eq $vo.id"} selected="selected"{/if}>{$vo.title}</option>
                         {/volist}
                     </select>
 				</span>
@@ -18,14 +19,14 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>栏目名称：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="填写栏目名称" id="title" name="title">
+                <input type="text" class="input-text" value="{$data.title}" placeholder="填写栏目名称" id="title" name="title">
             </div>
         </div>
 
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>URL：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="" placeholder="填写URL 按照模块名/控制器名/方法名" id="name" name="name">
+                <input type="text" class="input-text" value="{$data.name}" placeholder="填写URL 按照模块名/控制器名/方法名" id="name" name="name">
             </div>
         </div>
 
@@ -34,8 +35,8 @@
             <div class="formControls col-xs-8 col-sm-9">
                 <span class="select-box">
                     <select name="status" class="select">
-                        <option value="1">正常开启</option>
-                        <option value="0"></option>
+                        <option value="1" {if condition="$data.status eq 1"} selected="selected"{/if}>正常开启</option>
+                        <option value="0" {if condition="$data.status eq 0"} selected="selected"{/if}>冻结</option>
                     </select>
 				</span>
             </div>
@@ -52,7 +53,7 @@
 {include file="public/footer"}
 <script>
     var SCOPE = {
-        'form_add_url' : "{:url('auth/addsonrule')}",
+        'form_add_url' : "{:url('auth/editsonrule')}",
     }
 </script>
 </html>

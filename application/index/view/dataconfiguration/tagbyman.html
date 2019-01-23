@@ -34,7 +34,7 @@
                 <td>{$vo.type|type}</td>
                 <td><a href="__PUBLIC__{$vo.src}" target="_blank"><img width="100" class="picture-thumb" src="__PUBLIC__{$vo.src}"></a></td>
                 <td class="text-c">{$vo.tag|mechinetags}</td>
-                <td class="td-status">{$vo.status|status}</td>
+                <td class="td-status">{$vo.status|tagstatus}</td>
                 <td>{$vo.uid|getuserbyuid}</td>
             </tr>
             {/volist}

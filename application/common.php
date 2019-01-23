@@ -28,6 +28,20 @@ function type($type){
     return $data['name'];
 }
 
+function tagstatus($tagstatus){
+    $str = "";
+    switch ($tagstatus){
+        case '0' :
+            $str = "<span class=\"label label-danger radius\">未人工标注</span>";
+            break;
+        case '1' :
+            $str = "<span class=\"label label-success radius\">人工已标注</span>";
+            break;
+
+    }
+    return $str;
+}
+
 function status($status){
     $str = "";
     switch ($status){
