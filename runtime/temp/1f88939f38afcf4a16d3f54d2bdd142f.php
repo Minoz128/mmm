@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/auth/rule.html";i:1548168002;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/auth/rule.html";i:1548245233;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -54,7 +54,7 @@
                 <td><?php echo $vo['title']; ?></td>
                 <td><?php echo $vo['name']; ?></td>
                 <td class="td-status"><a href="<?php echo url('Auth/rulestatus',['id'=>$vo['id'],'status'=>$vo['status']==1?0:1]); ?>"><?php echo commonstatus($vo['status']); ?></a></td>
-                <td class="f-14 td-manage"><a <?php if($vo['nid'] != 0): ?> style="display: none" <?php endif; ?>href="<?php echo url('Auth/rule',['id'=>$vo['id']]); ?>">查看对应的子节点</a> <a <?php if($vo['id'] == 1): ?> style="display: none" <?php endif; ?> style="text-decoration:none" class="ml-5" onClick="layer_show('编辑','<?php echo url('auth/editrule',['id'=>$vo['id']]); ?>','','300')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a></td>
+                <td class="f-14 td-manage"><a <?php if($vo['nid'] != 0): ?> style="display: none" <?php endif; ?>href="<?php echo url('Auth/rule',['id'=>$vo['id']]); ?>">查看对应的子节点</a> <a <?php if($vo['id'] == 3 or $vo['nid'] == 3): ?> style="display: none" <?php endif; ?> style="text-decoration:none" class="ml-5" onClick="layer_show('编辑','<?php echo url('auth/editrule',['id'=>$vo['id']]); ?>','','350')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a></td>
             </tr>
             <?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>

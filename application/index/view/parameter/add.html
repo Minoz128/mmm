@@ -1,0 +1,47 @@
+{include file="public/header"}
+<article class="page-container">
+    <form class="form form-horizontal" id="form-mmm-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>类型：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select name="type" class="select">
+					<option value="">-请选择-</option>
+                    <option value="int(10)">-int(10)-</option>
+                    <option value="varchar(30)">-varchar(30)-</option>
+                    <option value="float(10,2)">-float(10,2)-</option>
+                    <option value="datetime">-datetime-</option>
+				</select>
+				</span>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>字段名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="填写字段名" id="parameter" name="parameter">
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">备注：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="填写备注" id="comment" name="comment">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn-form-submit btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+                <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+{include file="public/footer"}
+<script>
+    var SCOPE = {
+        'form_add_url' : "{:url('parameter/add')}",
+    }
+</script>
+</html>

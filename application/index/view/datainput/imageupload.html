@@ -10,7 +10,6 @@
     <div class="cl pd-5 bg-1 bk-gray mt-20">
             <span class="l">
                 <a class="btn btn-success radius" onclick="layer_show('批量导入图片接口','{:url(\'Dataconfiguration/uploadimg\')}','','500')" href='javascript:void(0)'> 批量导入图片接口</a>
-                 <a class="btn btn-secondary radius" onclick="layer_show('百度图片爬取','{:url(\'Dataconfiguration/patch\')}','','350')" href='javascript:void(0)'> 爬虫在线爬取图片接口</a>
                 <a class="btn btn-warning radius" onclick="DelConfirm()"> 一键删除所有图片信息</a>
             </span>
     </div>
@@ -33,7 +32,7 @@
                 <td>{$vo.id}</td>
                 <td>{$vo.type|type}</td>
                 <td><a href="__PUBLIC__{$vo.src}" target="_blank"><img width="100" class="picture-thumb" src="__PUBLIC__{$vo.src}"></a></td>
-                <td class="td-status">{$vo.status|status}</td>
+                <td class="td-status">{$vo.status|tagstatus}</td>
                 <td>{$vo.uid|getuserbyuid}</td>
             </tr>
             {/volist}

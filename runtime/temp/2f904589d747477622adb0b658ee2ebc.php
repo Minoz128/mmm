@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/auth/addsonrule.html";i:1548166648;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/auth/addsonrule.html";i:1548245233;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -63,7 +63,7 @@
                 <span class="select-box">
                     <select name="status" class="select">
                         <option value="1">正常开启</option>
-                        <option value="0">冻结(该组下所有用户不可登录系统)</option>
+                        <option value="0"></option>
                     </select>
 				</span>
             </div>

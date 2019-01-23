@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:94:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/tagbyman.html";i:1548086138;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:94:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/dataconfiguration/tagbyman.html";i:1548245233;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -62,7 +62,7 @@
                 <td><?php echo type($vo['type']); ?></td>
                 <td><a href="/mmm/public<?php echo $vo['src']; ?>" target="_blank"><img width="100" class="picture-thumb" src="/mmm/public<?php echo $vo['src']; ?>"></a></td>
                 <td class="text-c"><?php echo mechinetags($vo['tag']); ?></td>
-                <td class="td-status"><?php echo status($vo['status']); ?></td>
+                <td class="td-status"><?php echo tagstatus($vo['status']); ?></td>
                 <td><?php echo getuserbyuid($vo['uid']); ?></td>
             </tr>
             <?php endforeach; endif; else: echo "" ;endif; ?>

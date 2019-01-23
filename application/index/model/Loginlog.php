@@ -10,6 +10,9 @@ use think\Model;
 
 class Loginlog extends Model{
     public function getAllData(){
-        return $this->select();
+        $order = [
+            'id' => 'desc'
+        ];
+        return $this->order($order)->select();
     }
 }
