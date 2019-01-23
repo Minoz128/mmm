@@ -16,6 +16,7 @@ class AuthRule extends Validate{
         'addFather' => ['status','title','name'],
         'addSon' => ['nid','status','title','name'],
         'updatefatherrule' => ['id','status','title','name'],
+        'updatesonrule' => ['id','nid','status','title','name'],
     ];
 
     protected $rule = [
