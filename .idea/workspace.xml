@@ -200,8 +200,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2494">
-              <caret line="372" column="46" selection-start-line="372" selection-start-column="46" selection-end-line="372" selection-end-column="46" />
+            <state relative-caret-position="926">
+              <caret line="172" column="54" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
               <folding>
                 <element signature="e#120#141#0#PHP" expanded="true" />
               </folding>
@@ -441,12 +441,12 @@
       <workItem from="1547904791086" duration="213000" />
       <workItem from="1547991380786" duration="4059000" />
       <workItem from="1548076367306" duration="1388000" />
-      <workItem from="1548162475635" duration="7086000" />
+      <workItem from="1548162475635" duration="7420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29799000" />
+    <option name="totallyTimeSpent" value="30133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2488" height="1417" extended-state="6" />
@@ -724,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2494">
-          <caret line="372" column="46" selection-start-line="372" selection-start-column="46" selection-end-line="372" selection-end-column="46" />
+        <state relative-caret-position="926">
+          <caret line="172" column="54" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
           <folding>
             <element signature="e#120#141#0#PHP" expanded="true" />
           </folding>
