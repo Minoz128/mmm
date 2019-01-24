@@ -15,7 +15,7 @@ class Pic extends Model{
     }
 
     public function reset0(){
-        return $this->execute("update m_pic set status=0,tag=null,manmadetags=null,resulterr=null");
+        return $this->execute("update m_pic set status=0,tag=null,manmadetags=null,exec_num=0,resulterr=null");
     }
 
     public function selectByWhere($where){
@@ -27,6 +27,6 @@ class Pic extends Model{
     }
 
     public function updateData($id,$insertTag){
-        return $this->execute("update m_pic set tag='{$insertTag}' where id={$id}");
+        return $this->execute("update m_pic set tag='{$insertTag}',status=1,exec_num=exec_num+1 where id={$id}");
     }
 }

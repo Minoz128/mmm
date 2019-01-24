@@ -1,6 +1,6 @@
 {include file="public/header"}
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据集管理 <span class="c-gray en">&gt;</span> 参数表结构 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据集管理 <span class="c-gray en">&gt;</span> 参数表数据 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <div class="text-c">
         <button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
@@ -16,37 +16,33 @@
 
 
             <a class="btn btn-primary radius" data-title="添加参数" data-href="" onclick="layer_show('添加参数','{:url('parameter/add')}','','350')" href="javascript:;">
-                <i class="Hui-iconfont">&#xe600;</i> 添加参数
+                <i class="Hui-iconfont">&#xe600;</i> 添加参数(列)
             </a>
             <a class="btn btn-primary radius" data-title="记录实验参数组" data-href="" onclick="layer_show('记录实验参数组','{:url('parameter/addexperiencegroups')}','','350')" href="javascript:;">
-                <i class="Hui-iconfont">&#xe600;</i> 记录实验参数组
+                <i class="Hui-iconfont">&#xe600;</i> 记录实验参数组(行)
             </a>
         </span>
-
+        <span class="r">
+            共有数据：<strong>{$count}</strong> 条
+        </span>
     </div>
     <div class="mt-20">
         <table class="my-table table table-border table-bordered table-bg table-hover table-sort table-responsive">
             <thead>
-            <tr class="text-c">
-                <th width="5"><input type="checkbox" name="" value=""></th>
-                <th width="25">参数名</th>
-                <th width="25">索引</th>
-                <th width="25">类型&大小</th>
-                <th width="25">缺省值</th>
-                <th width="25">备注</th>
-                <th width="25">权限</th>
-            </tr>
+                <tr class="text-c">
+                    <th width="25"><input type="checkbox" name="" value=""></th>
+                    {volist name="tablefields" id="vo"}
+                        <th width="25">{$vo.Comment}</th>
+                    {/volist}
+                </tr>
             </thead>
             <tbody>
-            {volist name="tablefields" id="vo"}
+            {volist name="data" id="vo"}
                 <tr class="text-c">
                     <td><input type="checkbox" value="" name=""></td>
-                    <td>{$vo.Field}</td>
-                    <td>{$vo.Key}</td>
-                    <td>{$vo.Type}</td>
-                    <td>{$vo.Default}</td>
-                    <td>{$vo.Comment}</td>
-                    <td>{$vo.Privileges}</td>
+                    {volist name="tablefields" id="vo1"}
+                        <td>{$vo1.Field}</td>
+                    {/volist}
                 </tr>
             {/volist}
             </tbody>
