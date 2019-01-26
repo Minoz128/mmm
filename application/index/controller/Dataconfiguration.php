@@ -101,6 +101,7 @@ class Dataconfiguration extends Controller{
 
     public function reset0(){
         model("Pic")->reset0();
+        model("ParaExperience")->truncateAllData();
         $this->success('重置成功');
     }
 
@@ -414,7 +415,6 @@ class Dataconfiguration extends Controller{
 
     /**
      * 准备函数 遍历m_pic每张表的数据
-     *
      * 如果没有session 跳转到SelectByMachineSession方法
      * 目的是避免每次生成随机数据都去数据库查询一次数据
      *
@@ -427,25 +427,39 @@ class Dataconfiguration extends Controller{
      *
      */
     function rendomSelectByMachine(){
-        session("tags_SelectByMachine",null);
-        $this->SelectByMachineSession();
-        if(!is_array(session("tags_SelectByMachine"))){
-            $return = $this->SelectByMachineSession();
-            if(!$return){
-                $this->error("session生成失败,功能停止运行");
-            }
-        }
-
-        $pics = Db::name('Pic')->select();
-
-        foreach ($pics as $picKey=>$picValue){
-            foreach(session("tags_SelectByMachine") as $sessionKey=>$sessionValue){
-                if($sessionValue['id'] == $pics[$picKey]['type']){
-                    $this->executeRandomdata($pics[$picKey]['id'],$sessionValue['childrens']);
+        if(request()->isPost()){
+            $id = input('post.id');
+            $type = input('post.type');
+            if($id == 1 && $type > 0){
+                session("tags_SelectByMachine",null);
+                $this->SelectByMachineSession();
+                if(!is_array(session("tags_SelectByMachine"))){
+                    $return = $this->SelectByMachineSession();
+                    if(!$return){
+                        return show(0,"session生成失败,功能停止运行");
+                    }
                 }
+
+                $pics = Db::name('Pic')->select();
+
+                foreach ($pics as $picKey=>$picValue){
+                    foreach(session("tags_SelectByMachine") as $sessionKey=>$sessionValue){
+                        if($sessionValue['id'] == $pics[$picKey]['type']){
+                            $this->executeRandomdata($pics[$picKey]['id'],$sessionValue['childrens'],$type);
+                        }
+                    }
+                }
+                return show(1,"已获取机器生成标签接口提供的数据");
+            }else{
+                return show(0,"请选择参数组");
             }
+        }else{
+            $data = model('Parameter')->getAllData();
+            return $this->fetch('',[
+                'data' => $data
+            ]);
         }
-        $this->success("已获取机器生成标签接口提供的数据");
+
     }
 
 
@@ -456,7 +470,7 @@ class Dataconfiguration extends Controller{
      * @param $data
      * @return string
      */
-    function executeRandomdata($id,$data){
+    function executeRandomdata($id,$data,$type){
         $insert = "";
         if(is_array($data) && $id>0){
             foreach ($data as $key=>$value){
@@ -467,9 +481,10 @@ class Dataconfiguration extends Controller{
             }
             $insert = substr($insert,0,-1);
             model('Pic')->updateData($id,$insert);
+            model('ParaExperience')->insertdata($id,$insert,$type);
             return "single_insert_success";
         }else{
-            $this->error("参数传递不合法");
+            return show(0,"参数传递不合法");
         }
     }
 

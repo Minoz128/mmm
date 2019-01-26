@@ -1,0 +1,27 @@
+{include file="public/header"}
+<article class="page-container">
+    <form class="form form-horizontal" id="form-mmm-add">
+        {volist name="tablefields" offset="1" id="vo"}
+            <div class="row cl">
+                <label class="form-label col-xs-6 col-sm-5"><span class="c-red">*</span>{$vo.Comment}（{$vo.Type}）：</label>
+                <div class="formControls col-xs-6 col-sm-7">
+                    <input type="text" class="input-text" value="" placeholder="填写{$vo.Comment}" id="{$vo.Field}" name="{$vo.Field}">
+                </div>
+            </div>
+        {/volist}
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn-form-submit btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+                <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+{include file="public/footer"}
+<script>
+    var SCOPE = {
+        'form_add_url' : "{:url('parameter/addexperiencegroups')}",
+    }
+</script>
+</html>

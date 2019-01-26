@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/parameter/index.html";i:1548343052;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:88:"/Applications/MAMP/htdocs/mmm/public/../application/index/view/parameter/index_info.html";i:1548343010;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/header.html";i:1547209534;s:71:"/Applications/MAMP/htdocs/mmm/application/index/view/public/footer.html";i:1547398902;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -28,7 +28,7 @@
     <meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据集管理 <span class="c-gray en">&gt;</span> 参数表结构 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据集管理 <span class="c-gray en">&gt;</span> 参数表数据 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
     <div class="text-c">
         <button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
@@ -44,37 +44,33 @@
 
 
             <a class="btn btn-primary radius" data-title="添加参数" data-href="" onclick="layer_show('添加参数','<?php echo url('parameter/add'); ?>','','350')" href="javascript:;">
-                <i class="Hui-iconfont">&#xe600;</i> 添加参数
+                <i class="Hui-iconfont">&#xe600;</i> 添加参数(列)
             </a>
             <a class="btn btn-primary radius" data-title="记录实验参数组" data-href="" onclick="layer_show('记录实验参数组','<?php echo url('parameter/addexperiencegroups'); ?>','','350')" href="javascript:;">
-                <i class="Hui-iconfont">&#xe600;</i> 记录实验参数组
+                <i class="Hui-iconfont">&#xe600;</i> 记录实验参数组(行)
             </a>
         </span>
-
+        <span class="r">
+            共有数据：<strong><?php echo $count; ?></strong> 条
+        </span>
     </div>
     <div class="mt-20">
         <table class="my-table table table-border table-bordered table-bg table-hover table-sort table-responsive">
             <thead>
-            <tr class="text-c">
-                <th width="5"><input type="checkbox" name="" value=""></th>
-                <th width="25">参数名</th>
-                <th width="25">索引</th>
-                <th width="25">类型&大小</th>
-                <th width="25">缺省值</th>
-                <th width="25">备注</th>
-                <th width="25">权限</th>
-            </tr>
+                <tr class="text-c">
+                    <th width="25"><input type="checkbox" name="" value=""></th>
+                    <?php if(is_array($tablefields) || $tablefields instanceof \think\Collection || $tablefields instanceof \think\Paginator): $i = 0; $__LIST__ = $tablefields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                        <th width="25"><?php echo $vo['Comment']; ?></th>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </tr>
             </thead>
             <tbody>
-            <?php if(is_array($tablefields) || $tablefields instanceof \think\Collection || $tablefields instanceof \think\Paginator): $i = 0; $__LIST__ = $tablefields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+            <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr class="text-c">
                     <td><input type="checkbox" value="" name=""></td>
-                    <td><?php echo $vo['Field']; ?></td>
-                    <td><?php echo $vo['Key']; ?></td>
-                    <td><?php echo $vo['Type']; ?></td>
-                    <td><?php echo $vo['Default']; ?></td>
-                    <td><?php echo $vo['Comment']; ?></td>
-                    <td><?php echo $vo['Privileges']; ?></td>
+                    <?php if(is_array($tablefields) || $tablefields instanceof \think\Collection || $tablefields instanceof \think\Paginator): $i = 0; $__LIST__ = $tablefields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?>
+                        <td><?php echo $vo1['Field']; ?></td>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </tr>
             <?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
