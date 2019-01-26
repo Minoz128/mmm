@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"C:\xampp\htdocs\mmm\public/../application/index\view\datainput\imageupload.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"C:\xampp\htdocs\mmm\public/../application/index\view\datainput\imageupload.html";i:1548290877;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -38,7 +38,6 @@
     <div class="cl pd-5 bg-1 bk-gray mt-20">
             <span class="l">
                 <a class="btn btn-success radius" onclick="layer_show('批量导入图片接口','<?php echo url('Dataconfiguration/uploadimg'); ?>','','500')" href='javascript:void(0)'> 批量导入图片接口</a>
-                 <a class="btn btn-secondary radius" onclick="layer_show('百度图片爬取','<?php echo url('Dataconfiguration/patch'); ?>','','350')" href='javascript:void(0)'> 爬虫在线爬取图片接口</a>
                 <a class="btn btn-warning radius" onclick="DelConfirm()"> 一键删除所有图片信息</a>
             </span>
     </div>
@@ -61,7 +60,7 @@
                 <td><?php echo $vo['id']; ?></td>
                 <td><?php echo type($vo['type']); ?></td>
                 <td><a href="/mmm/public<?php echo $vo['src']; ?>" target="_blank"><img width="100" class="picture-thumb" src="/mmm/public<?php echo $vo['src']; ?>"></a></td>
-                <td class="td-status"><?php echo status($vo['status']); ?></td>
+                <td class="td-status"><?php echo tagstatus($vo['status']); ?></td>
                 <td><?php echo getuserbyuid($vo['uid']); ?></td>
             </tr>
             <?php endforeach; endif; else: echo "" ;endif; ?>

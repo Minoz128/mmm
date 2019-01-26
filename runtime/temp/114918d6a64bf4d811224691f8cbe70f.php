@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\xampp\htdocs\mmm\public/../application/index\view\datainput\patch.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\xampp\htdocs\mmm\public/../application/index\view\datainput\patch.html";i:1548290877;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -60,7 +60,7 @@
                 <td><?php echo $vo['id']; ?></td>
                 <td><?php echo type($vo['type']); ?></td>
                 <td><a href="/mmm/public<?php echo $vo['src']; ?>" target="_blank"><img width="100" class="picture-thumb" src="/mmm/public<?php echo $vo['src']; ?>"></a></td>
-                <td class="td-status"><?php echo status($vo['status']); ?></td>
+                <td class="td-status"><?php echo tagstatus($vo['status']); ?></td>
                 <td><?php echo getuserbyuid($vo['uid']); ?></td>
             </tr>
             <?php endforeach; endif; else: echo "" ;endif; ?>
