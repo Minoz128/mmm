@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"C:\xampp\htdocs\mmm\public/../application/index\view\dataconfiguration\updatetag.html";i:1547544966;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1547209534;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1547398902;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"C:\xampp\htdocs\mmm\public/../application/index\view\dataconfiguration\updatetag.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -28,31 +28,60 @@
     <meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
 <body>
+<div class="container" style="margin-top: 20px;">
 <table class="my-table table table-border table-bordered table-bg table-hover table-sort table-responsive">
     <tr>
-        <td>
+        <th colspan="2">
+            机器识别标注
+        </th>
+        <th colspan="2">
+            手工修正标注
+        </th>
+    </tr>
+    <tr>
+        <td colspan="2" class="left" style="text-align: left;text-indent: 100px;">
+            <?php if(is_array($tree['childrens']) || $tree['childrens'] instanceof \think\Collection || $tree['childrens'] instanceof \think\Paginator): $i = 0; $__LIST__ = $tree['childrens'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <div style="padding: 5px 10px;font-size: 14px"><strong><?php echo $vo['tagname']; ?></strong></div>
+                <div style="padding: 5px 10px">
+                    <?php if(is_array($vo['sonlists']) || $vo['sonlists'] instanceof \think\Collection || $vo['sonlists'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['sonlists'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$children): $mod = ($i % 2 );++$i;?>
+                        <label for="<?php echo $children['id']; ?>"><input type="checkbox" id="<?php echo $children['id']; ?>" name="ids" value="<?php echo $children['id']; ?>">
+                            <strong><?php echo $children['tagname']; ?></strong>
+                        </label>&nbsp;
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </td>
+        <td colspan="2" style="text-align: left;text-indent: 100px;color:#E48139">
+            <?php if(is_array($tree['childrens']) || $tree['childrens'] instanceof \think\Collection || $tree['childrens'] instanceof \think\Paginator): $i = 0; $__LIST__ = $tree['childrens'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <div style="padding: 5px 10px;font-size: 14px"><strong><?php echo $vo['tagname']; ?></strong></div>
+                <div style="padding: 5px 10px">
+                    <?php if(is_array($vo['sonlists']) || $vo['sonlists'] instanceof \think\Collection || $vo['sonlists'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['sonlists'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$children): $mod = ($i % 2 );++$i;?>
+                        <label for="<?php echo $children['id']; ?>"><input type="checkbox" man-id="<?php echo $children['id']; ?>" name="manmade-ids" value="<?php echo $children['id']; ?>">
+                            <strong><?php echo $children['tagname']; ?></strong>
+                        </label>&nbsp;
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
             <div class="row cl">
-                <div>
+                <div class="formControls col-xs-offset-1 col-sm-offset-1 col-xs-5 col-sm-5">
                     <input type="hidden" value="<?php echo $tag; ?>" id="tag">
-                    <button class="btn-form-submit btn btn-secondary radius" onclick="getIds()" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存权限</button>
+                    <input type="hidden" value="<?php echo $id; ?>" id="id">
+                    <button class="btn-form-submit btn btn-secondary radius" onclick="getIds()" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存人工修正的标注</button>
                     <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                </div>
+                <div class="formControls col-xs-offset-1 col-sm-offset-1 col-xs-2 col-sm-2">
+                    <label style="margin-top: 3px">修改人：<?php echo $user; ?></label>
+
                 </div>
             </div>
         </td>
     </tr>
-    <td colspan="4" style="text-align: left;text-indent: 260px;">
-        <?php if(is_array($tree['childrens']) || $tree['childrens'] instanceof \think\Collection || $tree['childrens'] instanceof \think\Paginator): $i = 0; $__LIST__ = $tree['childrens'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-            <div style="padding: 5px 10px;font-size: 14px"><input type="checkbox" id="<?php echo $vo['id']; ?>" name="ids" value="<?php echo $vo['id']; ?>" onclick="return false;"><strong><?php echo $vo['tagname']; ?></strong></div>
-            <div style="padding: 5px 10px">
-                <?php if(is_array($vo['sonlists']) || $vo['sonlists'] instanceof \think\Collection || $vo['sonlists'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['sonlists'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$children): $mod = ($i % 2 );++$i;?>
-                <label for="<?php echo $children['id']; ?>"><input type="checkbox" id="<?php echo $children['id']; ?>" name="ids" value="<?php echo $children['id']; ?>">
-                    <?php echo $children['tagname']; ?>
-                </label>&nbsp;
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-            </div>
-        <?php endforeach; endif; else: echo "" ;endif; ?>
-    </td>
 </table>
+</div>
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="/mmm/public/static/hui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="/mmm/public/static/hui/static/h-ui/js/H-ui.min.js"></script>
@@ -68,33 +97,18 @@
 </body>
 <script>
 
-    $(".selectId").change(function () {
-        $("input[name='ids']").removeAttr("checked");
-        var url = "<?php echo url('auth/authrule'); ?>";
-        var id = $(this).val();
-        var data = {"id" : id};
-        $.post(url,data,function(result){
-            if(result.status == 1){
-                var Ids = result.data;
-                $(Ids.split(",")).each(function (i,dom) {
-                    //console.log(dom);
-                    $(":checkbox[value='"+dom+"']").prop("checked",true);
-                    $(":checkbox[id='"+dom+"']").prop("checked",true);
-                });
-            }
-        },"JSON");
-    });
-
     function getIds() {
         var id = $("#id").val();
         var text = "";
-        $("[name='ids']:checked").each(function (index,element) {
+        $("[name='manmade-ids']:checked").each(function (index,element) {
             text += $(this).val() + ",";
         });
         text = text.substr(0,text.length-1);
-
-        var url = "<?php echo url('auth/postrule'); ?>";
-        var data = {"id" : id,"rules" : text};
+        if(!text){
+            dialog.error("请在右侧选择手工标注项");
+        }
+        var url = "<?php echo url('dataconfiguration/updateManMadeTags'); ?>";
+        var data = {"id" : id,"manmadetags" : text};
         $.post(url,data,function (result) {
             if(result.status == 1){
                 window.parent.location.reload();
@@ -103,20 +117,13 @@
                 dialog.error(result.message);
             }
         },"JSON");
-
-
     }
 
 
     var tags = $("#tag").val();
-
-    tags.split(",").each(function (i,dom) {
-        console.log(dom);
-        $(":checkbox[value='"+dom+"']").prop("checked",true);
-        $(":checkbox[id='"+dom+"']").prop("checked",true);
+    $(tags.split(",")).each(function (i,dom) {
+        $(".left [type='checkbox'][value='"+dom+"']").prop("checked",true);
+        $(".left [type='checkbox'][id='"+dom+"']").prop("checked",true);
     });
-    
-
-
 
 </script>

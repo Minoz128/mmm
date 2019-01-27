@@ -32,7 +32,21 @@ function tagstatus($tagstatus){
     $str = "";
     switch ($tagstatus){
         case '0' :
-            $str = "<span class=\"label label-danger radius\">未人工标注</span>";
+            $str = "<span class=\"label label-danger radius\">机器暂未生成标签</span>";
+            break;
+        case '1' :
+            $str = "<span class=\"label label-success radius\">机器已生成标签</span>";
+            break;
+
+    }
+    return $str;
+}
+
+function manmade_status($manmade_status){
+    $str = "";
+    switch ($manmade_status){
+        case '0' :
+            $str = "<span class=\"label label-danger radius\">人工未标注</span>";
             break;
         case '1' :
             $str = "<span class=\"label label-success radius\">人工已标注</span>";
@@ -41,6 +55,8 @@ function tagstatus($tagstatus){
     }
     return $str;
 }
+
+
 
 function status($status){
     $str = "";
@@ -109,6 +125,16 @@ function mechinetags($mechinetags){
     $title = "";
     foreach ($res as $key=>$value){
         $title.= '<span class="btn btn-warning-outline radius size-S">'.$value['tagname'].'</span> ';
+    }
+    $title = substr($title,0,-1);
+    return $title;
+}
+
+function tag_by_man_made($manmadetags){
+    $res = \think\Db::name("tagbase")->field('tagname')->where('id','in',explode(",",$manmadetags))->select();
+    $title = "";
+    foreach ($res as $key=>$value){
+        $title.= '<span class="btn btn-secondary radius size-S">'.$value['tagname'].'</span> ';
     }
     $title = substr($title,0,-1);
     return $title;

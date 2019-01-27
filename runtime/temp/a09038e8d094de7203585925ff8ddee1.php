@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"C:\xampp\htdocs\mmm\public/../application/index\view\dataconfiguration\tagbyman.html";i:1548222828;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"C:\xampp\htdocs\mmm\public/../application/index\view\dataconfiguration\tagbyman.html";i:1548470810;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\header.html";i:1548205508;s:61:"C:\xampp\htdocs\mmm\application\index\view\public\footer.html";i:1548205508;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -37,7 +37,7 @@
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20">
         <span class="l">
-            <a class="btn btn-primary-outline radius" href="<?php echo url('Dataconfiguration/rendomSelectByMachine'); ?>"> 获取机器学习识别结果数据接口</a>
+            <a class="btn btn-primary-outline radius" onclick="layer_show('添加参数','<?php echo url('Dataconfiguration/rendomSelectByMachine'); ?>','','200')" href="javascript:;"> 获取机器学习识别结果数据接口</a>
             <a class="btn btn-warning radius" href="<?php echo url('Dataconfiguration/reset0'); ?>"> 重置数据</a>
         </span>
     </div>
@@ -49,7 +49,8 @@
                 <th width="20">ID</th>
                 <th width="70">分类</th>
                 <th width="100">图像</th>
-                <th width="100">机器判定</th>
+                <th width="100">机器判定(最新一次结果)</th>
+                <th width="40">已做的对比试验组数</th>
                 <th width="60">发布状态</th>
                 <th width="55">信息上传人</th>
             </tr>
@@ -62,6 +63,7 @@
                 <td><?php echo type($vo['type']); ?></td>
                 <td><a href="/mmm/public<?php echo $vo['src']; ?>" target="_blank"><img width="100" class="picture-thumb" src="/mmm/public<?php echo $vo['src']; ?>"></a></td>
                 <td class="text-c"><?php echo mechinetags($vo['tag']); ?></td>
+                <td><span class="btn btn-default radius"><a <?php if($vo['exec_num'] > 1): ?> style="display: none" <?php endif; ?> href=""><?php echo $vo['exec_num']; ?></a><?php if($vo['exec_num'] > 1): ?><a title="点击查看详细报告" href=""><?php echo $vo['exec_num']; ?></a><?php endif; ?></span></td>
                 <td class="td-status"><?php echo tagstatus($vo['status']); ?></td>
                 <td><?php echo getuserbyuid($vo['uid']); ?></td>
             </tr>

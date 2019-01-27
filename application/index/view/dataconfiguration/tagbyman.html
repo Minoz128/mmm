@@ -35,7 +35,7 @@
                 <td>{$vo.type|type}</td>
                 <td><a href="__PUBLIC__{$vo.src}" target="_blank"><img width="100" class="picture-thumb" src="__PUBLIC__{$vo.src}"></a></td>
                 <td class="text-c">{$vo.tag|mechinetags}</td>
-                <td><span class="btn btn-default radius"><a {if condition="$vo.exec_num gt 1"} style="display: none" {/if} href="">{$vo.exec_num}</a>{if condition="$vo.exec_num gt 1"}<a title="点击查看详细报告" href="">{$vo.exec_num}(点击查看)</a>{/if}</span></td>
+                <td><span class="btn btn-default radius"><a {if condition="$vo.exec_num gt 1"} style="display: none" {/if} href="">{$vo.exec_num}</a>{if condition="$vo.exec_num gt 1"}<a title="点击查看详细报告" href="">{$vo.exec_num}</a>{/if}</span></td>
                 <td class="td-status">{$vo.status|tagstatus}</td>
                 <td>{$vo.uid|getuserbyuid}</td>
             </tr>

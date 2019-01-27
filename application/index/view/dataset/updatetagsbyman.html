@@ -1,0 +1,43 @@
+{include file='public/header'}
+<body>
+<div class="page-container">
+    <div class="mt-20">
+        <table class="my-table table table-border table-bordered table-bg table-hover table-sort">
+            <thead>
+            <tr class="text-c">
+                <th width="10"><input name="" type="checkbox" value=""></th>
+                <th width="20">ID</th>
+                <th width="70">来源于参数组</th>
+                <th width="100">图像</th>
+                <th width="100">机器判定</th>
+                <th width="100">人工标注</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="result" id="vo"}
+                <tr class="text-c">
+                    <td><input name="" type="checkbox" value=""></td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.brief}</td>
+                    <td><a href="__PUBLIC__{$vo.src}" target="_blank"><img width="100" class="picture-thumb" src="__PUBLIC__{$vo.src}"></a></td>
+                    <td class="text-c">{$vo.tag|mechinetags}</td>
+                    <td class="text-c">
+                        {$vo.tag_by_man|manmadetags}
+                        <a {if condition="($vo.tag_by_man neq null) || ($onshow_status == 0)"} style="display: none" {/if} class="btn btn-success radius size-MINI" onclick="layer_show('添加人工标注','{:url('dataset/addmanmadetag',[\'id\'=>$vo.id])}','','500')" href='javascript:void(0)'> 添加人工标注</a>
+                    </td>
+                </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{include file='public/footer'}
+<script type="text/javascript">
+    var table = $(".my-table").dataTable({
+
+    });
+</script>
+
+</html>

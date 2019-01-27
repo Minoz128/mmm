@@ -165,14 +165,17 @@ class Dataconfiguration extends Controller{
         for ($pn = 0; $pn <= $num; $pn += 30) {
             $url = "http://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&fp=result&queryWord+=&ie=utf-8&oe=utf-8&word=".$keyword."=&pn=".$pn."&rn=30";
             $json = file_get_contents($url);
-            $array = json_decode($json);
+            $array = json_decode($json,true);
 
-            foreach ($array->data as $key => $image) {
-                if (!in_array($image, $res)) {
-                    if (isset($image->middleURL)) {
-                        $res[] = $image->middleURL;
-                    }elseif (isset($image->thumbURL)){
-                        $res[] = $image->thumbURL;
+
+            if (is_array($array) || is_object($array)) {
+                foreach ($array['data'] as $key => $image) {
+                    if (!in_array($image, $res)) {
+                        if (isset($image['middleURL'])) {
+                            $res[] = $image['middleURL'];
+                        } elseif (isset($image['thumbURL'])) {
+                            $res[] = $image['thumbURL'];
+                        }
                     }
                 }
             }
@@ -495,7 +498,7 @@ class Dataconfiguration extends Controller{
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    function updatetag(){
+    /*function updatetag(){
         $id = input('get.id');
         session("tags_SelectByMachine",null);
         $this->SelectByMachineSession();
@@ -520,12 +523,12 @@ class Dataconfiguration extends Controller{
                 }
             }
         }
-    }
+    }*/
 
     /**
      * 提交人工修正接口
      */
-    function updateManMadeTags(){
+    /*function updateManMadeTags(){
         $data = input('post.');
         if(!Validate("Pic")->scene("updateManMade")->check($data)){
             return show(0,Validate("Pic")->getError());
@@ -536,7 +539,7 @@ class Dataconfiguration extends Controller{
         }else{
             return show(0,"更新失败");
         }
-    }
+    }*/
 
     //数据集管理->图片标注
     function tagbyman(){
@@ -556,5 +559,6 @@ class Dataconfiguration extends Controller{
             'status1Count' => $status1Count,
         ]);
     }
+
 
 }

@@ -29,4 +29,8 @@ class Pic extends Model{
     public function updateData($id,$insertTag){
         return $this->execute("update m_pic set tag='{$insertTag}',status=1,exec_num=exec_num+1 where id={$id}");
     }
+
+    public function updateManMadeStatus($id){
+        return $this->execute("update m_pic set manmade_status=1 where id=(select pic_id from m_para_experience where id={$id})");
+    }
 }
